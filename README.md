@@ -3,7 +3,7 @@ Repository ini untuk menyimpan tugas setiap pertemuan.
 
 ### Data diri
 | Nama                | NPM        |
-|---------------------|------------|
+| ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
 Setiap pertemuan akan memiliki branch masing-masing atau dapat diakses melalui link dibawah ini.
