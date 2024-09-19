@@ -1,5 +1,21 @@
 # Pertemuan 1
-### Review Bahasa Pemrograman
+19 September 2024
+
+### Data Diri
+| Nama                | NPM        |
+| ------------------- | ---------- |
+| Agil Ghani Istikmal | 5220411040 |
+
+#### Daftar Isi
+1. [Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
+2. [Install SDK Flutter]()
+3. [Hasil Instalasi Flutter]()
+4. [Program Hello World di beberapa bahasa pemrograman]()
+
+--- 
+
+### 1. Review Bahasa Pemrograman
+<img src="./assets/1.jpg" style="aspect-ratio: 2.5/1; object-fit: cover;" />
 Ada banyak bahasa pemrograman serta framework yang sering digunakan untuk keperluan mobile dan web service. Ada bahasa pemrograman yang secara langsung bisa digunakan untuk membuat aplikasi mobile (Android/iOS) maupun yang memerlukan bantuan framework atau library untuk membuat aplikasi mobile Android/iOS atau multi-platform (Android/iOS/Desktop).
 
 #### Mobile Client
@@ -21,3 +37,5 @@ Web Client adalah aplikasi yang menampilkan tampilan kepada user melalui browser
 - Javascript/Typescript framework (ExpressJS, NextJS, NestJS, Hono, ElysiaJS, dan lain lain)
 - Go
 - Go framework (Fiber, Gin, dan lain lain)
+- Python
+- Python framework (Django, Flask, dan lain lain)
