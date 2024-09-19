@@ -7,8 +7,14 @@
 | Agil Ghani Istikmal | 5220411040 |
 
 #### Daftar Isi
-1. [Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
-   [1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan](#11-review-beberapa-bahasa-pemrograman-yang-pernah-digunakan)
+- [Pertemuan 1](#pertemuan-1)
+    - [Data Diri](#data-diri)
+      - [Daftar Isi](#daftar-isi)
+    - [1. Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
+      - [Mobile Client](#mobile-client)
+      - [Web Client](#web-client)
+      - [Web Server](#web-server)
+    - [1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan](#11-review-beberapa-bahasa-pemrograman-yang-pernah-digunakan)
       - [1.1.1 Java](#111-java)
       - [1.1.2 Javascript](#112-javascript)
       - [1.1.3 TypeScript](#113-typescript)
@@ -16,10 +22,17 @@
       - [1.1.5 Golang (Favorit)](#115-golang-favorit)
       - [1.1.6 Kotlin](#116-kotlin)
       - [1.1.7 Dart](#117-dart)
-      - [1.1.7 Rust](#117-rust)
-2. [Install SDK Flutter]()
-3. [Hasil Instalasi Flutter]()
-4. [Program Hello World di beberapa bahasa pemrograman]()
+      - [1.1.8 Rust](#118-rust)
+    - [4. Program Hello World Di Beberapa Bahasa Pemrograman](#4-program-hello-world-di-beberapa-bahasa-pemrograman)
+      - [4.1 Java](#41-java)
+      - [4.2 Javascript](#42-javascript)
+      - [4.3 Typescript](#43-typescript)
+      - [4.4 Python](#44-python)
+      - [4.5 Golang](#45-golang)
+      - [4.6 Kotlin](#46-kotlin)
+      - [4.7 Dart](#47-dart)
+      - [4.8 Rust](#48-rust)
+
 
 --- 
 
@@ -129,9 +142,93 @@ Ingin agar aplikasi android juga berjalan di iOS, saya mempelajari bahasa pemrog
 
 Flutter sangat memudahkan untuk membuat aplikasi multi-platform, syntax yang sederhana dan mengandalkan widget untuk membuat fungsionalitas aplikasi.
 
-#### 1.1.7 Rust
+#### 1.1.8 Rust
 <p align="center">
   <img src="./assets/rust.svg" height="100">
 </p>
 
 Rust adalah bahasa pemrograman yang sedang saya pelajari sekarang. Rust terkenal dengan kecepatannya yang katanya mengalahkan Golang. <br>
+
+---
+
+### 4. Program Hello World Di Beberapa Bahasa Pemrograman
+
+Berikut adalah cara penulisan kode untuk menampilkan text "Hello World" di beberapa bahasa pemrograman.
+
+#### 4.1 Java
+
+```java
+class Contoh {
+    public static void main(String []args) {
+        System.out.println("Hello World");
+    }
+};
+```
+
+Seperti kode diatas, untum menampilkan "Hello World" saja memerlukan beberapa step, mulai dari class, main function, dan memanggil fungsi println.
+
+#### 4.2 Javascript
+
+```js
+console.log("Hello World")
+```
+
+Javascript tidak memerlukan class dan main function untuk menajalankan program. Cukup langsung memanggil fungsi console.log("text") sudah bisa menampilkan suatu text.
+
+#### 4.3 Typescript
+
+```js
+console.log("Hello World")
+```
+
+Untuk menampilkan "Hello WOrld", TypeScript sama seperti Javascript.
+
+#### 4.4 Python
+
+```py
+print("Hello World")
+```
+
+Python sangat sederhana dibandingkan yang lain.
+
+#### 4.5 Golang
+
+```go
+package main
+
+func main() {
+  fmt.Println("Hello World")
+}
+```
+
+Golang memerlukan deklarasi package dan main function untuk menjalankan program.
+
+#### 4.6 Kotlin
+
+```kt
+fun main(args : Array<String>) {
+    println("Hello World")
+}
+```
+
+Kotlin terlihat lebih sederhana daripada Java.
+
+#### 4.7 Dart
+
+```dart
+void main() {
+  print('Hello World');
+}
+```
+
+Dart lebih sederhana lagi jika dibandingkan dengan Kotlin.
+
+#### 4.8 Rust
+
+```rs
+fn main() {
+    println!("Hello World");
+}
+```
+
+Untuk sekedar menampilkan "Hello World", Rust memang terlihat mudah. Namun, untuk kasus lainnya Rust terkesan kompleks.
