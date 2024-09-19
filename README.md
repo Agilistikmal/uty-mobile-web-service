@@ -12,4 +12,4 @@ Setiap pertemuan akan memiliki branch masing-masing atau dapat diakses melalui l
 
 **Pertemuan 1** <br>
 Tanggal 19 September 2024 <br>
-[Review Bahasa Pemrograman (klik disini)](https://github.com/agilistikmal/uty-mobile-web-service/tree/Pertemuan-1)
+[Review Bahasa Pemrograman (klik disini)](https://github.com/Agilistikmal/uty-mobile-web-service/blob/Pertemuan-1/review-bahasa-pemrograman.md)
