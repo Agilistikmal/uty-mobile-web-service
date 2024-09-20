@@ -1,4 +1,4 @@
-# Pertemuan 1
+# Pertemuan 1 <!-- omit in toc -->
 
 19 September 2024
 
@@ -8,37 +8,36 @@
 | ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
-#### Daftar Isi
+### Daftar Isi
 
-- [Pertemuan 1](#pertemuan-1)
-  - [Data Diri](#data-diri)
-    - [Daftar Isi](#daftar-isi)
-  - [1. Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
-    - [Mobile Client](#mobile-client)
-    - [Web Client](#web-client)
-    - [Web Server](#web-server)
-  - [1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan](#11-review-beberapa-bahasa-pemrograman-yang-pernah-digunakan)
-    - [1.1.1 Java](#111-java)
-    - [1.1.2 Javascript](#112-javascript)
-    - [1.1.3 TypeScript](#113-typescript)
-    - [1.1.4 Python](#114-python)
-    - [1.1.5 Golang (Favorit)](#115-golang-favorit)
-    - [1.1.6 Kotlin](#116-kotlin)
-    - [1.1.7 Dart](#117-dart)
-    - [1.1.8 Rust](#118-rust)
-  - [2. Menginstall Flutter](#2-menginstall-flutter)
-    - [2.1 Android Studio](#21-android-studio)
-    - [2.2 Flutter](#22-flutter)
-  - [3. Mencoba Android Studio dan Flutter](#3-mencoba-android-studio-dan-flutter)
-  - [4. Program Hello World Di Beberapa Bahasa Pemrograman](#4-program-hello-world-di-beberapa-bahasa-pemrograman)
-    - [4.1 Java](#41-java)
-    - [4.2 Javascript](#42-javascript)
-    - [4.3 Typescript](#43-typescript)
-    - [4.4 Python](#44-python)
-    - [4.5 Golang](#45-golang)
-    - [4.6 Kotlin](#46-kotlin)
-    - [4.7 Dart](#47-dart)
-    - [4.8 Rust](#48-rust)
+- [Data Diri](#data-diri)
+- [Daftar Isi](#daftar-isi)
+- [1. Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
+  - [Mobile Client](#mobile-client)
+  - [Web Client](#web-client)
+  - [Web Server](#web-server)
+- [1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan](#11-review-beberapa-bahasa-pemrograman-yang-pernah-digunakan)
+  - [1.1.1 Java](#111-java)
+  - [1.1.2 Javascript](#112-javascript)
+  - [1.1.3 TypeScript](#113-typescript)
+  - [1.1.4 Python](#114-python)
+  - [1.1.5 Golang (Favorit)](#115-golang-favorit)
+  - [1.1.6 Kotlin](#116-kotlin)
+  - [1.1.7 Dart](#117-dart)
+  - [1.1.8 Rust](#118-rust)
+- [2. Menginstall Flutter](#2-menginstall-flutter)
+  - [2.1 Android Studio](#21-android-studio)
+  - [2.2 Flutter](#22-flutter)
+- [3. Mencoba Android Studio dan Flutter](#3-mencoba-android-studio-dan-flutter)
+- [4. Program Hello World Di Beberapa Bahasa Pemrograman](#4-program-hello-world-di-beberapa-bahasa-pemrograman)
+  - [4.1 Java](#41-java)
+  - [4.2 Javascript](#42-javascript)
+  - [4.3 Typescript](#43-typescript)
+  - [4.4 Python](#44-python)
+  - [4.5 Golang](#45-golang)
+  - [4.6 Kotlin](#46-kotlin)
+  - [4.7 Dart](#47-dart)
+  - [4.8 Rust](#48-rust)
 
 ---
 
@@ -278,6 +277,39 @@ Selesai.
 
 ### 3. Mencoba Android Studio dan Flutter
 
+Pertama buka dan buat Virtual Device di Android Studio. Caranya seperti dibawah ini.
+
+<p align="center">
+  <img src="./assets/3.1.jpg">
+</p>
+<p align="center">
+  <img src="./assets/3.1.2.jpg">
+</p>
+<p align="center">
+  <img src="./assets/3.1.3.jpg">
+</p>
+<p align="center">
+  <img src="./assets/3.1.4.jpg">
+</p>
+<p align="center">
+  <img src="./assets/3.1.5.jpg">
+</p>
+<p align="center">
+  <img src="./assets/3.1.6.jpg">
+</p>
+
+Selanjutnya, buka dan jalankan aplikasi Flutter di Visual Studio Code.
+
+<p align="center">
+  <img src="./assets/3.2.jpg">
+</p>
+
+Pilih Device yang ingin digunakan. Lalu jalankan `flutter run` di terminal.
+
+<p align="center">
+  <img src="./assets/3.2.1.jpg">
+</p>
+
 ---
 
 ### 4. Program Hello World Di Beberapa Bahasa Pemrograman
@@ -394,3 +426,9 @@ fn main() {
 ```
 
 Hati hati terhadap `;` diakhir, karena Rust wajib menggunakan titik koma.
+
+---
+
+_5220411040 - Agil Ghani Istikmal_
+_agil_g@safatanc.com_
+_agil.5220411040@student.uty.ac.id_
