@@ -1,60 +1,72 @@
 # Pertemuan 1
+
 19 September 2024
 
 ### Data Diri
+
 | Nama                | NPM        |
 | ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
 #### Daftar Isi
+
 - [Pertemuan 1](#pertemuan-1)
-    - [Data Diri](#data-diri)
-      - [Daftar Isi](#daftar-isi)
-    - [1. Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
-      - [Mobile Client](#mobile-client)
-      - [Web Client](#web-client)
-      - [Web Server](#web-server)
-    - [1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan](#11-review-beberapa-bahasa-pemrograman-yang-pernah-digunakan)
-      - [1.1.1 Java](#111-java)
-      - [1.1.2 Javascript](#112-javascript)
-      - [1.1.3 TypeScript](#113-typescript)
-      - [1.1.4 Python](#114-python)
-      - [1.1.5 Golang (Favorit)](#115-golang-favorit)
-      - [1.1.6 Kotlin](#116-kotlin)
-      - [1.1.7 Dart](#117-dart)
-      - [1.1.8 Rust](#118-rust)
-    - [4. Program Hello World Di Beberapa Bahasa Pemrograman](#4-program-hello-world-di-beberapa-bahasa-pemrograman)
-      - [4.1 Java](#41-java)
-      - [4.2 Javascript](#42-javascript)
-      - [4.3 Typescript](#43-typescript)
-      - [4.4 Python](#44-python)
-      - [4.5 Golang](#45-golang)
-      - [4.6 Kotlin](#46-kotlin)
-      - [4.7 Dart](#47-dart)
-      - [4.8 Rust](#48-rust)
+  - [Data Diri](#data-diri)
+    - [Daftar Isi](#daftar-isi)
+  - [1. Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
+    - [Mobile Client](#mobile-client)
+    - [Web Client](#web-client)
+    - [Web Server](#web-server)
+  - [1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan](#11-review-beberapa-bahasa-pemrograman-yang-pernah-digunakan)
+    - [1.1.1 Java](#111-java)
+    - [1.1.2 Javascript](#112-javascript)
+    - [1.1.3 TypeScript](#113-typescript)
+    - [1.1.4 Python](#114-python)
+    - [1.1.5 Golang (Favorit)](#115-golang-favorit)
+    - [1.1.6 Kotlin](#116-kotlin)
+    - [1.1.7 Dart](#117-dart)
+    - [1.1.8 Rust](#118-rust)
+  - [2. Menginstall Flutter](#2-menginstall-flutter)
+    - [2.1 Android Studio](#21-android-studio)
+    - [2.2 Flutter](#22-flutter)
+  - [3. Mencoba Android Studio dan Flutter](#3-mencoba-android-studio-dan-flutter)
+  - [4. Program Hello World Di Beberapa Bahasa Pemrograman](#4-program-hello-world-di-beberapa-bahasa-pemrograman)
+    - [4.1 Java](#41-java)
+    - [4.2 Javascript](#42-javascript)
+    - [4.3 Typescript](#43-typescript)
+    - [4.4 Python](#44-python)
+    - [4.5 Golang](#45-golang)
+    - [4.6 Kotlin](#46-kotlin)
+    - [4.7 Dart](#47-dart)
+    - [4.8 Rust](#48-rust)
 
-
---- 
+---
 
 ### 1. Review Bahasa Pemrograman
+
 <img src="./assets/1.jpg" />
 Ada banyak bahasa pemrograman serta framework yang sering digunakan untuk keperluan mobile dan web service. Ada bahasa pemrograman yang secara langsung bisa digunakan untuk membuat aplikasi mobile (Android/iOS) maupun yang memerlukan bantuan framework atau library untuk membuat aplikasi mobile Android/iOS atau multi-platform (Android/iOS/Desktop).
 
 #### Mobile Client
+
 Mobile Client adalah aplikasi yang menampilkan tampilan kepada user melalui device Android atau iOS. Beberapa bahasa pemrograman yang populer digunakan sebagai berikut:
+
 - Java
 - Kotlin
 - Javascript (menggunakan React Native)
 - Dart (menggunakan Flutter)
 
 #### Web Client
+
 Web Client adalah aplikasi yang menampilkan tampilan kepada user melalui browser. Banyak library/framework populer saat ini yang memakai bahasa pemrograman JavaScript sebagai dasar atau inti dari teknologi mereka, karena saat ini hanya JavaScript yang bisa berjalan langsung di browser. Namun, bahasa pemrograman seperti PHP juga tetap masih banyak yang menggunakan.
+
 - PHP
 - PHP framework (Laravel, Codeigniter, dan lain lain)
 - Javascript
 - Javascript library/framework (React, Angular, Svelte, Vue, dan lain lain)
 
 #### Web Server
+
 - Javascript/Typescript (NodeJS, Bun, Deno, dan lain lain)
 - Javascript/Typescript framework (ExpressJS, NextJS, NestJS, Hono, ElysiaJS, dan lain lain)
 - Go
@@ -65,6 +77,7 @@ Web Client adalah aplikasi yang menampilkan tampilan kepada user melalui browser
 ### 1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan
 
 #### 1.1.1 Java
+
 <p align="center">
   <img src="./assets/java.png" height="100">
 </p>
@@ -74,7 +87,8 @@ Tentu saja, saya sebagai anak SMP, java sangat membingungkan pada saat itu. Awal
 Sekarang saya tidak terlalu kesulitan seperti dulu untuk menggunakan Bahasa Pemrograman Java. <br>
 Karena pertama kali terjun ke dunia pemrograman menggunakan Java, saya merasa lebih mudah untuk mempelajari bahasa pemrograman lainnya karena Java adalah bahasa pemrograman yang terbilang komplit dan banyak menginspirasi bahasa pemrograman baru lainnya.
 
-#### 1.1.2 Javascript 
+#### 1.1.2 Javascript
+
 <p align="center">
   <img src="./assets/javascript.png" height="100">
 </p>
@@ -86,6 +100,7 @@ Saya belajar JavaScript untuk belajar membuat website yang interaktif, karena Ja
 Saya tetap kesulitan, namun tidak sesulit saat mempelajari Java. Karena banyak syntax syntax yang cara penulisannya mirip dengan Java. Namun, JavaScript tidak memerlukan dan dapat berjalan tanpa class dan main function.
 
 #### 1.1.3 TypeScript
+
 <p align="center">
   <img src="./assets/typescript.png" height="100">
 </p>
@@ -97,6 +112,7 @@ Javascript memiliki masalah pada typesafe. Javascript tidak strict terhadap tipe
 Saya mencari solusi dan menemukan jawaban bahwa TypeScript adalah solusi untuk masalah tersebut.
 
 #### 1.1.4 Python
+
 <p align="center">
   <img src="./assets/python.png" height="100">
 </p>
@@ -110,6 +126,7 @@ Python lebih menggunakan ":" dibanding "{ }" untuk class, function, serta loopin
 Sedikit membingungkan diawal, namun terasa simple saat sudah memahaminya.
 
 #### 1.1.5 Golang (Favorit)
+
 <p align="center">
   <img src="./assets/golang.png" height="100">
 </p>
@@ -125,6 +142,7 @@ Golang adalah bahasa pemrograman yang sangat strict, error akan diketahui saat m
 Saya biasa menggunakan Go untuk membuat backend API tanpa menggunakan framework, karena built-in package golang sudah sangat mencukupi.
 
 #### 1.1.6 Kotlin
+
 <p align="center">
   <img src="./assets/kotlin.png" height="100">
 </p>
@@ -134,6 +152,7 @@ Tidak puas di web, saya mempelajari Kotlin sebagai bahasa pemrograman saya ke-6 
 Aplikasi Android juga bisa dibuat menggunakan Kotlin, karena Kotlin berjalan di Java Virtual Machine. <br>
 
 #### 1.1.7 Dart
+
 <p align="center">
   <img src="./assets/dart.png" height="100">
 </p>
@@ -143,11 +162,121 @@ Ingin agar aplikasi android juga berjalan di iOS, saya mempelajari bahasa pemrog
 Flutter sangat memudahkan untuk membuat aplikasi multi-platform, syntax yang sederhana dan mengandalkan widget untuk membuat fungsionalitas aplikasi.
 
 #### 1.1.8 Rust
+
 <p align="center">
   <img src="./assets/rust.svg" height="100">
 </p>
 
 Rust adalah bahasa pemrograman yang sedang saya pelajari sekarang. Rust terkenal dengan kecepatannya yang katanya mengalahkan Golang. <br>
+
+---
+
+### 2. Menginstall Flutter
+
+Sebelumnya kita sudah mengenal Dart dan mengetahui Flutter untuk mengembangkan aplikasi multi-platform khususnya Android/iOS. <br>
+
+Sekarang saya akan mencoba menginstall Android Studio untuk menggunakan Virtual Device, lalu menginstall Flutter.
+
+#### 2.1 Android Studio
+
+Pergi ke halaman https://developer.android.com/studio dan klik Download. <br>
+<img src="./assets/2.1.jpg">
+
+Setelah download selesai, buka file `.exe`.
+
+<p align="center">
+  <img src="./assets/2.1.1.jpg">
+</p>
+
+Karena sebelumnya saya sudah menginstall versi sebelumnya, maka saya akan uninstall terlebih dahulu. Selanjutnya ikuti seperti gambar dibawah ini.
+
+<p align="center">
+  <img src="./assets/2.1.2.jpg">
+</p>
+
+<p align="center">
+  <img src="./assets/2.1.3.jpg">
+</p>
+<p align="center">
+  <img src="./assets/2.1.4.jpg">
+</p>
+<p align="center">
+  <img src="./assets/2.1.5.jpg">
+</p>
+<p align="center">
+  <img src="./assets/2.1.6.jpg">
+</p>
+<p align="center">
+  <img src="./assets/2.1.7.jpg">
+</p>
+
+Karena saya akan mencoba Android Studio setelah menginstall Flutter, maka saya tidak mencentang "Start Android Studio" terlebih dahulu.
+
+#### 2.2 Flutter
+
+Pergi ke halaman https://docs.flutter.dev/get-started/install dan pilih sistem operasi.
+
+<p align="center">
+  <img src="./assets/2.2.jpg">
+</p>
+
+<p align="center">
+  <img src="./assets/2.2.1.jpg">
+</p>
+<p align="center">
+  <img src="./assets/2.2.2.jpg">
+</p>
+
+Terdapat pilihan menginstall melalui Vistual Studio Code. Saya akan memilih itu saja karena lebih mudah.
+
+<p align="center">
+  <img src="./assets/2.2.3.jpg">
+</p>
+
+Cari dan Install Extension Flutter di Visual Studio Code.
+
+<p align="center">
+  <img src="./assets/2.2.4.jpg">
+</p>
+
+`CTRL + SHIFT + P` lalu ketik `Flutter:` dan pilih New Project.
+
+<p align="center">
+  <img src="./assets/2.2.4.1.jpg">
+</p>
+
+Jika ada error seperti diatas, klik Download SDK jika belum download.
+
+<p align="center">
+  <img src="./assets/2.2.4.2.jpg">
+</p>
+
+Pilih folder untuk menyimpan SDK.
+
+<p align="center">
+  <img src="./assets/2.2.4.3.jpg">
+</p>
+
+<p align="center">
+  <img src="./assets/2.2.4.4.jpg">
+</p>
+
+<p align="center">
+  <img src="./assets/2.2.4.5.jpg">
+</p>
+
+Tambahkan SDK ke PATH seperti diatas.
+
+<p align="center">
+  <img src="./assets/2.2.4.6.jpg">
+</p>
+
+Jika ada error di kode program seperti diatas, jalankan `pub upgrade` seperti di kanan bawah. <br>
+Selesai.
+
+---
+
+### 3. Mencoba Android Studio dan Flutter
 
 ---
 
@@ -162,15 +291,27 @@ class Contoh {
     public static void main(String []args) {
         System.out.println("Hello World");
     }
-};
+}
 ```
 
 Seperti kode diatas, untum menampilkan "Hello World" saja memerlukan beberapa step, mulai dari class, main function, dan memanggil fungsi println.
 
+```java
+// Error
+class Contoh {
+    public static void main(String []args) {
+        // Lupa titik koma
+        System.out.println("Hello World") <--
+    }
+}
+```
+
+Banyak programmer pemula yang mendapatkan error karena hal kecil seperti titik koma.
+
 #### 4.2 Javascript
 
 ```js
-console.log("Hello World")
+console.log("Hello World");
 ```
 
 Javascript tidak memerlukan class dan main function untuk menajalankan program. Cukup langsung memanggil fungsi console.log("text") sudah bisa menampilkan suatu text.
@@ -178,7 +319,7 @@ Javascript tidak memerlukan class dan main function untuk menajalankan program. 
 #### 4.3 Typescript
 
 ```js
-console.log("Hello World")
+console.log("Hello World");
 ```
 
 Untuk menampilkan "Hello WOrld", TypeScript sama seperti Javascript.
@@ -202,6 +343,18 @@ func main() {
 ```
 
 Golang memerlukan deklarasi package dan main function untuk menjalankan program.
+
+```go
+// Error
+package main
+
+func main() {
+  // huruf p kecil
+  fmt.println("Hello World")
+}
+```
+
+Hati hati saat menulis kode di Golang, huruf depan diawali dengan huruf kapital untuk fungsi yang bersifat Public, dan huruf kecil yang bersifat Private.
 
 #### 4.6 Kotlin
 
@@ -231,4 +384,13 @@ fn main() {
 }
 ```
 
-Untuk sekedar menampilkan "Hello World", Rust memang terlihat mudah. Namun, untuk kasus lainnya Rust terkesan kompleks.
+Untuk sekedar menampilkan "Hello World", Rust memang terlihat mudah. Namun, untuk kasus lainnya Rust terkesan kompleks. <br>
+
+```rs
+// Error
+fn main() {
+    println!("Hello World") <--
+}
+```
+
+Hati hati terhadap `;` diakhir, karena Rust wajib menggunakan titik koma.
