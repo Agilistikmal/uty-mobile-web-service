@@ -1,0 +1,89 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+// Stateless artinya tidak ada perubahan yang dinamis alias statis
+// Tidak memerlukan state yang value nya bisa berubah-ubah
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // build adalah root atau jalur utama dari aplikasi kita
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Widget App Demo',
+      theme: ThemeData(
+        // Ini adalah tema basic untuk tampilan aplikasi kita
+        // Contohnya kita bisa mengubah tema warna dibawah ini menjadi merah
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(
+        // Ini adalah title pada bagian atas aplikasi
+        title: 'Widget App Demo',
+      ),
+    );
+  }
+}
+
+// Stateful artinya dinamis
+// ada state yang value nya bisa berubah-ubah
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // Saat function ini dijalankan (dengan mengklik tombol)
+      // maka nilai counter akan bertambah
+      _counter++;
+    });
+  }
+
+  // build disini akan selalu dibuild ulang saat ada state yang berubah
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        // Background color disini mengambil value dari colorScheme sebelumnya
+        // namun warna akan diinverse agar lebih soft
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // widget.title disini mengambil dari value yang ada di MyHomePage diatas
+        title: Text(widget.title),
+      ),
+      body: Center(
+        // Center untuk mempositikan ke tengah secara horizontal dan vertical
+        // Child adalah isi yang akan berada diposisi tengah
+        child: Column(
+          // Column adalah kolom yang berisi widget widget lainnya
+          // Bisa diatur posisinya
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'Tombol diklik sebanyak',
+            ),
+            Text(
+              '$_counter kali',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}

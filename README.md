@@ -1,6 +1,7 @@
-# Pertemuan 1 <!-- omit in toc -->
+# Pertemuan 2 <!-- omit in toc -->
 
-19 September 2024
+26 September 2024 <br>
+_Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
 
 ### Data Diri
 
@@ -8,427 +9,172 @@
 | ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
-### Daftar Isi
+### Flutter Widget
 
-- [Data Diri](#data-diri)
-- [Daftar Isi](#daftar-isi)
-- [1. Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
-  - [Mobile Client](#mobile-client)
-  - [Web Client](#web-client)
-  - [Web Server](#web-server)
-- [1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan](#11-review-beberapa-bahasa-pemrograman-yang-pernah-digunakan)
-  - [1.1.1 Java](#111-java)
-  - [1.1.2 Javascript](#112-javascript)
-  - [1.1.3 TypeScript](#113-typescript)
-  - [1.1.4 Python](#114-python)
-  - [1.1.5 Golang (Favorit)](#115-golang-favorit)
-  - [1.1.6 Kotlin](#116-kotlin)
-  - [1.1.7 Dart](#117-dart)
-  - [1.1.8 Rust](#118-rust)
-- [2. Menginstall Flutter](#2-menginstall-flutter)
-  - [2.1 Android Studio](#21-android-studio)
-  - [2.2 Flutter](#22-flutter)
-- [3. Mencoba Android Studio dan Flutter](#3-mencoba-android-studio-dan-flutter)
-- [4. Program Hello World Di Beberapa Bahasa Pemrograman](#4-program-hello-world-di-beberapa-bahasa-pemrograman)
-  - [4.1 Java](#41-java)
-  - [4.2 Javascript](#42-javascript)
-  - [4.3 Typescript](#43-typescript)
-  - [4.4 Python](#44-python)
-  - [4.5 Golang](#45-golang)
-  - [4.6 Kotlin](#46-kotlin)
-  - [4.7 Dart](#47-dart)
-  - [4.8 Rust](#48-rust)
+Widget adalah hal yang akan sering dijumpai saat membuat aplikasi menggunakan flutter. Semua komponen didalam flutter disebut sebagai widget. <br>
+Contohnya saat ingin menampilkan tulisan menggunakan widget Text. <br>
+Dibawah ini adalah penjelasan singkat tentang widget dari _default project_ flutter.
 
----
+#### Stateless dan Stateful Widget
 
-### 1. Review Bahasa Pemrograman
-
-<img src="./assets/1.jpg" />
-Ada banyak bahasa pemrograman serta framework yang sering digunakan untuk keperluan mobile dan web service. Ada bahasa pemrograman yang secara langsung bisa digunakan untuk membuat aplikasi mobile (Android/iOS) maupun yang memerlukan bantuan framework atau library untuk membuat aplikasi mobile Android/iOS atau multi-platform (Android/iOS/Desktop).
-
-#### Mobile Client
-
-Mobile Client adalah aplikasi yang menampilkan tampilan kepada user melalui device Android atau iOS. Beberapa bahasa pemrograman yang populer digunakan sebagai berikut:
-
-- Java
-- Kotlin
-- Javascript (menggunakan React Native)
-- Dart (menggunakan Flutter)
-
-#### Web Client
-
-Web Client adalah aplikasi yang menampilkan tampilan kepada user melalui browser. Banyak library/framework populer saat ini yang memakai bahasa pemrograman JavaScript sebagai dasar atau inti dari teknologi mereka, karena saat ini hanya JavaScript yang bisa berjalan langsung di browser. Namun, bahasa pemrograman seperti PHP juga tetap masih banyak yang menggunakan.
-
-- PHP
-- PHP framework (Laravel, Codeigniter, dan lain lain)
-- Javascript
-- Javascript library/framework (React, Angular, Svelte, Vue, dan lain lain)
-
-#### Web Server
-
-- Javascript/Typescript (NodeJS, Bun, Deno, dan lain lain)
-- Javascript/Typescript framework (ExpressJS, NextJS, NestJS, Hono, ElysiaJS, dan lain lain)
-- Go
-- Go framework (Fiber, Gin, dan lain lain)
-- Python
-- Python framework (Django, Flask, dan lain lain)
-
-### 1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan
-
-#### 1.1.1 Java
-
-<p align="center">
-  <img src="./assets/java.png" height="100">
-</p>
-
-Bahasa Pemrograman Java adalah bahasa yang pertama kali saya pelajari saat mengenal dunia pemrograman. Saat itu saya masih menjadi siswa SMP. <br>
-Tentu saja, saya sebagai anak SMP, java sangat membingungkan pada saat itu. Awalnya saya mempelajari bagaimana cara membuat plugin untuk game [Minecraft](https://minecraft.net). Saya mencari dan meniru tutorial yang ada di YouTube. <br>
-Sekarang saya tidak terlalu kesulitan seperti dulu untuk menggunakan Bahasa Pemrograman Java. <br>
-Karena pertama kali terjun ke dunia pemrograman menggunakan Java, saya merasa lebih mudah untuk mempelajari bahasa pemrograman lainnya karena Java adalah bahasa pemrograman yang terbilang komplit dan banyak menginspirasi bahasa pemrograman baru lainnya.
-
-#### 1.1.2 Javascript
-
-<p align="center">
-  <img src="./assets/javascript.png" height="100">
-</p>
-
-Bahasa Pemrograman ke-2 yang saya pelajari adalah JavaScript. Dulu saya berpikir Java dan JavaScript adalah Bahasa Pemrograman yang sama, namun ternyata JavaScript berbeda dari Java. <br>
-
-Saya belajar JavaScript untuk belajar membuat website yang interaktif, karena JavaScript adalah bahasa yang dapat berjalan di browser secara langsung. <br>
-
-Saya tetap kesulitan, namun tidak sesulit saat mempelajari Java. Karena banyak syntax syntax yang cara penulisannya mirip dengan Java. Namun, JavaScript tidak memerlukan dan dapat berjalan tanpa class dan main function.
-
-#### 1.1.3 TypeScript
-
-<p align="center">
-  <img src="./assets/typescript.png" height="100">
-</p>
-
-Karena permasalahan di Javascript, saya memutuskan untuk mempelajari bahasa pemrograman ke-3 saya yaitu TypeScript. <br>
-
-Javascript memiliki masalah pada typesafe. Javascript tidak strict terhadap tipe data yang tidak terdeteksi error saat melakukan coding, namun bisa error saat dijalankan, dan itu sangat merepotkan untuk mencari titik kesalahan. <br>
-
-Saya mencari solusi dan menemukan jawaban bahwa TypeScript adalah solusi untuk masalah tersebut.
-
-#### 1.1.4 Python
-
-<p align="center">
-  <img src="./assets/python.png" height="100">
-</p>
-
-Masuk ke era Machine Learning dan AI, saya penasaran dan mempelajari bahasa pemrograman ke-4 saya yaitu Python. <br>
-
-Saat pertama kali mempelajari Python, saya kaget karena syntax dan style cara menulis kode python sangat berbeda dari 3 bahasa yang sebelumnya saya pelajari. <br>
-
-Python lebih menggunakan ":" dibanding "{ }" untuk class, function, serta looping. <br>
-
-Sedikit membingungkan diawal, namun terasa simple saat sudah memahaminya.
-
-#### 1.1.5 Golang (Favorit)
-
-<p align="center">
-  <img src="./assets/golang.png" height="100">
-</p>
-
-Penasaran dengan kepopuleran bahasa pemrograman Go, saya pun mempelajari Golang sebagai bahasa pemrograman ke-5 saya. Dan saat ini menjadi bahasa pemrograman favorit saya. <br>
-
-Golang dikenal dengan kecepatannya. Namun yang membuat saya menjadikan Golang bahasa pemrograman favorit adalah Simple, Strict, Safe. <br>
-
-Syntax Golang memang terlihat tidak simple, namun menurut saya itu adalah syntax yang mudah dimengerti. <br>
-
-Golang adalah bahasa pemrograman yang sangat strict, error akan diketahui saat melakukan coding, dan minim error yang tidak terduga setelah aplikasi dijalankan. <br>
-
-Saya biasa menggunakan Go untuk membuat backend API tanpa menggunakan framework, karena built-in package golang sudah sangat mencukupi.
-
-#### 1.1.6 Kotlin
-
-<p align="center">
-  <img src="./assets/kotlin.png" height="100">
-</p>
-
-Tidak puas di web, saya mempelajari Kotlin sebagai bahasa pemrograman saya ke-6 untuk membuat aplikasi mobile Android. <br>
-
-Aplikasi Android juga bisa dibuat menggunakan Kotlin, karena Kotlin berjalan di Java Virtual Machine. <br>
-
-#### 1.1.7 Dart
-
-<p align="center">
-  <img src="./assets/dart.png" height="100">
-</p>
-
-Ingin agar aplikasi android juga berjalan di iOS, saya mempelajari bahasa pemrograman Dart sebagai bahasa pemrograman ke-7 saya, dan menggunakan framework Flutter untuk membuat aplikasi multi-platform. <br>
-
-Flutter sangat memudahkan untuk membuat aplikasi multi-platform, syntax yang sederhana dan mengandalkan widget untuk membuat fungsionalitas aplikasi.
-
-#### 1.1.8 Rust
-
-<p align="center">
-  <img src="./assets/rust.svg" height="100">
-</p>
-
-Rust adalah bahasa pemrograman yang sedang saya pelajari sekarang. Rust terkenal dengan kecepatannya yang katanya mengalahkan Golang. <br>
-
----
-
-### 2. Menginstall Flutter
-
-Sebelumnya kita sudah mengenal Dart dan mengetahui Flutter untuk mengembangkan aplikasi multi-platform khususnya Android/iOS. <br>
-
-Sekarang saya akan mencoba menginstall Android Studio untuk menggunakan Virtual Device, lalu menginstall Flutter.
-
-#### 2.1 Android Studio
-
-Pergi ke halaman https://developer.android.com/studio dan klik Download. <br>
-<img src="./assets/2.1.jpg">
-
-Setelah download selesai, buka file `.exe`.
-
-<p align="center">
-  <img src="./assets/2.1.1.jpg">
-</p>
-
-Karena sebelumnya saya sudah menginstall versi sebelumnya, maka saya akan uninstall terlebih dahulu. Selanjutnya ikuti seperti gambar dibawah ini.
-
-<p align="center">
-  <img src="./assets/2.1.2.jpg">
-</p>
-
-<p align="center">
-  <img src="./assets/2.1.3.jpg">
-</p>
-<p align="center">
-  <img src="./assets/2.1.4.jpg">
-</p>
-<p align="center">
-  <img src="./assets/2.1.5.jpg">
-</p>
-<p align="center">
-  <img src="./assets/2.1.6.jpg">
-</p>
-<p align="center">
-  <img src="./assets/2.1.7.jpg">
-</p>
-
-Karena saya akan mencoba Android Studio setelah menginstall Flutter, maka saya tidak mencentang "Start Android Studio" terlebih dahulu.
-
-#### 2.2 Flutter
-
-Pergi ke halaman https://docs.flutter.dev/get-started/install dan pilih sistem operasi.
-
-<p align="center">
-  <img src="./assets/2.2.jpg">
-</p>
-
-<p align="center">
-  <img src="./assets/2.2.1.jpg">
-</p>
-<p align="center">
-  <img src="./assets/2.2.2.jpg">
-</p>
-
-Terdapat pilihan menginstall melalui Vistual Studio Code. Saya akan memilih itu saja karena lebih mudah.
-
-<p align="center">
-  <img src="./assets/2.2.3.jpg">
-</p>
-
-Cari dan Install Extension Flutter di Visual Studio Code.
-
-<p align="center">
-  <img src="./assets/2.2.4.jpg">
-</p>
-
-`CTRL + SHIFT + P` lalu ketik `Flutter:` dan pilih New Project.
-
-<p align="center">
-  <img src="./assets/2.2.4.1.jpg">
-</p>
-
-Jika ada error seperti diatas, klik Download SDK jika belum download.
-
-<p align="center">
-  <img src="./assets/2.2.4.2.jpg">
-</p>
-
-Pilih folder untuk menyimpan SDK.
-
-<p align="center">
-  <img src="./assets/2.2.4.3.jpg">
-</p>
-
-<p align="center">
-  <img src="./assets/2.2.4.4.jpg">
-</p>
-
-<p align="center">
-  <img src="./assets/2.2.4.5.jpg">
-</p>
-
-Tambahkan SDK ke PATH seperti diatas.
-
-<p align="center">
-  <img src="./assets/2.2.4.6.jpg">
-</p>
-
-Jika ada error di kode program seperti diatas, jalankan `pub upgrade` seperti di kanan bawah. <br>
-Selesai.
-
----
-
-### 3. Mencoba Android Studio dan Flutter
-
-Pertama buka dan buat Virtual Device di Android Studio. Caranya seperti dibawah ini.
-
-<p align="center">
-  <img src="./assets/3.1.jpg">
-</p>
-<p align="center">
-  <img src="./assets/3.1.2.jpg">
-</p>
-<p align="center">
-  <img src="./assets/3.1.3.jpg">
-</p>
-<p align="center">
-  <img src="./assets/3.1.4.jpg">
-</p>
-<p align="center">
-  <img src="./assets/3.1.5.jpg">
-</p>
-<p align="center">
-  <img src="./assets/3.1.6.jpg">
-</p>
-
-Selanjutnya, buka dan jalankan aplikasi Flutter di Visual Studio Code.
-
-<p align="center">
-  <img src="./assets/3.2.jpg">
-</p>
-
-Pilih Device yang ingin digunakan. Lalu jalankan `flutter run` di terminal.
-
-<p align="center">
-  <img src="./assets/3.2.1.jpg">
-</p>
-
----
-
-### 4. Program Hello World Di Beberapa Bahasa Pemrograman
-
-Berikut adalah cara penulisan kode untuk menampilkan text "Hello World" di beberapa bahasa pemrograman.
-
-#### 4.1 Java
-
-```java
-class Contoh {
-    public static void main(String []args) {
-        System.out.println("Hello World");
-    }
-}
-```
-
-Seperti kode diatas, untum menampilkan "Hello World" saja memerlukan beberapa step, mulai dari class, main function, dan memanggil fungsi println.
-
-```java
-// Error
-class Contoh {
-    public static void main(String []args) {
-        // Lupa titik koma
-        System.out.println("Hello World") <--
-    }
-}
-```
-
-Banyak programmer pemula yang mendapatkan error karena hal kecil seperti titik koma.
-
-#### 4.2 Javascript
-
-```js
-console.log("Hello World");
-```
-
-Javascript tidak memerlukan class dan main function untuk menajalankan program. Cukup langsung memanggil fungsi console.log("text") sudah bisa menampilkan suatu text.
-
-#### 4.3 Typescript
-
-```js
-console.log("Hello World");
-```
-
-Untuk menampilkan "Hello WOrld", TypeScript sama seperti Javascript.
-
-#### 4.4 Python
-
-```py
-print("Hello World")
-```
-
-Python sangat sederhana dibandingkan yang lain.
-
-#### 4.5 Golang
-
-```go
-package main
-
-func main() {
-  fmt.Println("Hello World")
-}
-```
-
-Golang memerlukan deklarasi package dan main function untuk menjalankan program.
-
-```go
-// Error
-package main
-
-func main() {
-  // huruf p kecil
-  fmt.println("Hello World")
-}
-```
-
-Hati hati saat menulis kode di Golang, huruf depan diawali dengan huruf kapital untuk fungsi yang bersifat Public, dan huruf kecil yang bersifat Private.
-
-#### 4.6 Kotlin
-
-```kt
-fun main(args : Array<String>) {
-    println("Hello World")
-}
-```
-
-Kotlin terlihat lebih sederhana daripada Java.
-
-#### 4.7 Dart
+Sebelum masuk lebih dalam, ada 2 jenis utama dalam widget. Yaitu stateless dan stateful widget. <br>
+**Stateless Widget** <br>
+Stateless widget adalah widget yang nilai dari widget tersebut bernilai tetap atau statis tidak dapat berubah ketika sudah ditampilkan. <br>
 
 ```dart
-void main() {
-  print('Hello World');
+// Stateless artinya tidak ada perubahan yang dinamis alias statis
+// Tidak memerlukan state yang value nya bisa berubah-ubah
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // build adalah root atau jalur utama dari aplikasi kita
+  @override
+  Widget build(BuildContext context) {
+    return ...
+  }
 }
 ```
 
-Dart lebih sederhana lagi jika dibandingkan dengan Kotlin.
+**Stateful Widget** <br>
+Sebaliknya, stateful widget berarti nilai didalam widget tersebut dapat berubah saat sudah ditampilkan. Contohnya nilai angka yang bisa berubah saat menekan suatu tombol.
 
-#### 4.8 Rust
+```dart
+// Stateful artinya dinamis
+// ada state yang value nya bisa berubah-ubah
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
 
-```rs
-fn main() {
-    println!("Hello World");
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  // nilai ini akan berubah saat menekan tombol
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // Saat function ini dijalankan (dengan mengklik tombol)
+      // maka nilai counter akan bertambah
+      _counter++;
+    });
+  }
+
+  // build disini akan selalu dibuild ulang saat ada state yang berubah
+  @override
+  Widget build(BuildContext context) {
+    return ...
+  }
 }
 ```
 
-Untuk sekedar menampilkan "Hello World", Rust memang terlihat mudah. Namun, untuk kasus lainnya Rust terkesan kompleks. <br>
+#### MaterialApp Widget
 
-```rs
-// Error
-fn main() {
-    println!("Hello World") <--
-}
+MaterialApp adalah tema yang dimiliki oleh google itu sendiri. Dengan widget ini kita bisa mengatur tema terkair aplikasi kita seperti title, colorScheme, dan lain lain.
+
+```dart
+MaterialApp(
+  title: 'Widget App Demo',
+  theme: ThemeData(
+    // Ini adalah tema basic untuk tampilan aplikasi kita
+    // Contohnya kita bisa mengubah tema warna dibawah ini menjadi merah
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+    useMaterial3: true,
+  ),
+  home: const MyHomePage(
+    // Ini adalah title pada bagian atas aplikasi
+    title: 'Widget App Demo',
+  ),
+);
 ```
 
-Hati hati terhadap `;` diakhir, karena Rust wajib menggunakan titik koma.
+Terlihat didalam widget MaterialApp sendiri juga terdapat widget widget lainnya seperti ThemeData untuk mengisi nilai tema tersebut, dan ColorScheme untuk menentukan warna.
 
----
+#### Scaffold Widget
 
-_5220411040 - Agil Ghani Istikmal_
-_agil_g@safatanc.com_
-_agil.5220411040@student.uty.ac.id_
+Scaffold biasa digunakan sebagai kanvas putih kosong. Didalam scaffold, banyak widget yang bisa ditambahkan.
+
+```dart
+Scaffold(
+  appBar: ...
+  body: ...
+  floatingActionButton: ...
+);
+```
+
+#### AppBar Widget
+
+AppBar adalah widget untuk menampilkan text diposisi atas. Berguna sebagai informasi halaman saat ini.
+
+```dart
+AppBar(
+  // Background color disini mengambil value dari colorScheme sebelumnya
+  // namun warna akan diinverse agar lebih soft
+  backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+  // widget.title disini mengambil dari value yang ada di MyHomePage diatas
+  title: Text(widget.title),
+),
+```
+
+AppBar juga memerlukan widget Text untuk menampilkan tulisan.
+
+<p align="center">
+  <img src="./assets/appbar-1.jpg" />
+</p>
+
+#### Center
+
+Center digunakan untuk memposisikan child ke posisi tengah layar secara horizontal dan vertical.
+
+```dart
+Center(
+  // Center untuk mempositikan ke tengah secara horizontal dan vertical
+  // Child adalah isi yang akan berada diposisi tengah
+  child: ...
+),
+```
+
+#### Column
+
+Column digunakan untuk membuat banyak widget berurutan kebawah.
+
+```dart
+Column(
+  // Column adalah kolom yang berisi widget widget lainnya
+  // Bisa diatur posisinya
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: <Widget>[
+    const Text(
+      'Tombol diklik sebanyak',
+    ),
+    Text(
+      '$_counter kali',
+      style: Theme.of(context).textTheme.headlineMedium,
+    ),
+  ],
+),
+```
+
+tambahkan const didepan widget text jika text statis, dan apabila text bisa berubah maka tidak ditambahkan const.
+
+<p align="center">
+  <img src="./assets/column-1.jpg" />
+</p>
+
+#### FloatingActionButton Widget
+
+Widget ini adalah tombol yang berada dikanan bawah. Pada aplikasi ini, saat tombol ini ditekan maka akan menambahkan value dari jumlah berapa kali tombol ini ditekan.
+
+```dart
+FloatingActionButton(
+  onPressed: _incrementCounter,
+  tooltip: 'Increment',
+  child: const Icon(Icons.add),
+),
+```
+
+<p align="center">
+  <img src="./assets/floating-1.jpg" />
+</p>
