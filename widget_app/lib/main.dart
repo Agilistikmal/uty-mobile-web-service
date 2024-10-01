@@ -41,12 +41,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _name = "";
 
   void _incrementCounter() {
     setState(() {
       // Saat function ini dijalankan (dengan mengklik tombol)
       // maka nilai counter akan bertambah
       _counter++;
+    });
+  }
+
+  void _setName(String value) {
+    setState(() {
+      _name = value;
     });
   }
 
@@ -69,8 +76,17 @@ class _MyHomePageState extends State<MyHomePage> {
           // Bisa diatur posisinya
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'Tombol diklik sebanyak',
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 50),
+              child: TextField(
+                decoration: const InputDecoration(hintText: "Masukkan nama..."),
+                onChanged: (value) {
+                  _setName(value);
+                },
+              ),
+            ),
+            Text(
+              '$_name mengklik sebanyak',
             ),
             Text(
               '$_counter kali',

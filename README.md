@@ -178,3 +178,68 @@ FloatingActionButton(
 <p align="center">
   <img src="./assets/floating-1.jpg" />
 </p>
+
+#### Menambahkan TextField
+
+Saatnya eksperimen, saya akan menambahkan text field untuk menginput nama dan akan ditampilkan saat text diubah. <br>
+Untuk membuat text field bisa menggunakan widget `TextField`. Saya juga membuat state baru untuk menyimpan data nama.
+
+```dart
+String _name = "";
+
+void _setName(String value) {
+  setState(() {
+    _name = value;
+  });
+}
+```
+
+```dart
+TextField(
+  decoration: const InputDecoration(hintText: "Masukkan nama..."),
+  onChanged: (value) {
+    _setName(value);
+  },
+),
+```
+
+`onChanged` akan dijalankan saat ada perubahan huruf di TextField. perlu diperhatikan saat deklarasi widget yang dapat berubah tidak menggunakan const. Sebelumnya saya mendapat error tidak bisa menggunakan `onChanged`.
+
+<p align="center">
+  <img src="./assets/textfield-1.jpg" />
+</p>
+
+TextField saya masukkan ke dalam widget Padding untuk memberikan jarak horizontal.
+
+```dart
+<Widget>[
+  Padding(
+    padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 50),
+    child: TextField(
+      decoration: const InputDecoration(hintText: "Masukkan nama..."),
+      onChanged: (value) {
+        _setName(value);
+      },
+    ),
+  ),
+  Text(
+    '$_name mengklik sebanyak',
+  ),
+  Text(
+    '$_counter kali',
+    style: Theme.of(context).textTheme.headlineMedium,
+  ),
+],
+```
+
+<p align="center">
+  <img src="./assets/textfield-2.jpg" />
+</p>
+
+<p align="center">
+  <img src="./assets/textfield-3.jpg" />
+</p>
+
+---
+
+_5220411040 - Agil Ghani Istikmal_
