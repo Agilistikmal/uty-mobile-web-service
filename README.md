@@ -9,6 +9,20 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
 | ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
+### Daftar Isi
+
+- [Data Diri](#data-diri)
+- [Daftar Isi](#daftar-isi)
+- [Flutter Widget](#flutter-widget)
+  - [Stateless dan Stateful Widget](#stateless-dan-stateful-widget)
+  - [MaterialApp Widget](#materialapp-widget)
+  - [Scaffold Widget](#scaffold-widget)
+  - [AppBar Widget](#appbar-widget)
+  - [Center](#center)
+  - [Column](#column)
+  - [FloatingActionButton Widget](#floatingactionbutton-widget)
+  - [Menambahkan TextField](#menambahkan-textfield)
+
 ### Flutter Widget
 
 Widget adalah hal yang akan sering dijumpai saat membuat aplikasi menggunakan flutter. Semua komponen didalam flutter disebut sebagai widget. <br>
