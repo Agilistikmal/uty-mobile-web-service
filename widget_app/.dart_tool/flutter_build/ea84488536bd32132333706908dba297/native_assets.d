@@ -1,1 +1,0 @@
- C:\\Users\\agili\\Agilistikmal\ Projects\\Project\\Flutter\\uty-mobile-web-service\\widget_app\\.dart_tool\\flutter_build\\ea84488536bd32132333706908dba297\\native_assets.yaml: 
