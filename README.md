@@ -21,3 +21,8 @@ Tanggal 19 September 2024 <br>
 Tanggal 26 September 2024 <br>
 
 - [Branch Pertemuan 2](https://github.com/Agilistikmal/uty-mobile-web-service/blob/Pertemuan-2)
+
+**Pertemuan 3** <br>
+Tanggal 3 Oktober 2024 <br>
+
+- [Branch Pertemuan 3](https://github.com/Agilistikmal/uty-mobile-web-service/blob/Pertemuan-3)
