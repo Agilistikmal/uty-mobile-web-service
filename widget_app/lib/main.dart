@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_app/screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,18 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Widget App Demo',
-      theme: ThemeData(
-        // Ini adalah tema basic untuk tampilan aplikasi kita
-        // Contohnya kita bisa mengubah tema warna dibawah ini menjadi merah
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(
-        // Ini adalah title pada bagian atas aplikasi
         title: 'Widget App Demo',
-      ),
-    );
+        theme: ThemeData(
+          // Ini adalah tema basic untuk tampilan aplikasi kita
+          // Contohnya kita bisa mengubah tema warna dibawah ini menjadi merah
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+          useMaterial3: true,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const HomeScreen());
   }
 }
 
