@@ -21,7 +21,9 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
           useMaterial3: true,
         ),
+        // Untuk menghilangkan banner debug di kanan atas
         debugShowCheckedModeBanner: false,
+        // Import HomeScreen dari file yang berbeda
         home: const HomeScreen());
   }
 }
