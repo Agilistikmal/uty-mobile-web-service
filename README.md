@@ -22,6 +22,7 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
   - [Column](#column)
   - [FloatingActionButton Widget](#floatingactionbutton-widget)
   - [Menambahkan TextField](#menambahkan-textfield)
+- [Referensi](#referensi)
 
 ### Flutter Widget
 
@@ -253,6 +254,10 @@ TextField saya masukkan ke dalam widget Padding untuk memberikan jarak horizonta
 <p align="center">
   <img src="./assets/textfield-3.jpg" />
 </p>
+
+### Referensi
+
+https://api.flutter.dev/flutter/widgets/widgets-library.html
 
 ---
 
