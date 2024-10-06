@@ -9,12 +9,26 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Sebagai control dan untuk mengambil nilai TextField
+  final npmController = TextEditingController();
+  final nameController = TextEditingController();
+
+  // Menyimpan list data
   List<Data> dataList = [];
 
+  // Untuk menambahkan data ke list
   void addToDataList(String npm, String name) {
     setState(() {
       dataList.add(Data(npm: npm, name: name));
     });
+  }
+
+  // Untuk membersihkan TextField saat state dimuat baru
+  @override
+  void dispose() {
+    npmController.dispose();
+    nameController.dispose();
+    super.dispose();
   }
 
   @override
@@ -66,11 +80,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 borderRadius: BorderRadius.circular(8),
                 color: Colors.grey.shade200,
               ),
-              child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12),
+              child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: TextField(
                     // Untuk styling TextField menggunakan InputDecoration
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       // LabelText adalah judul dari inputan
                       labelText: "Nama",
                       // HintText adalah placeholder/bantuan pengisian data
@@ -80,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderSide: BorderSide.none,
                       ),
                     ),
+                    controller: nameController,
                   )),
             ),
           ),
@@ -92,16 +107,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 borderRadius: BorderRadius.circular(8),
                 color: Colors.grey.shade200,
               ),
-              child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12),
+              child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: "NPM",
                       hintText: "Masukkan NPM...",
                       border: UnderlineInputBorder(
                         borderSide: BorderSide.none,
                       ),
                     ),
+                    controller: npmController,
                   )),
             ),
           ),
@@ -117,7 +133,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: TextButton(
                 // Saat Tombol di klik, maka akan mengubah state dan menampilkan datanya di section bawah ini.
-                onPressed: () => {addToDataList("5220411040", "Agil")},
+                onPressed: () => {
+                  // Menambahkan data ke list
+                  addToDataList(npmController.text, nameController.text),
+                  // Menghapus value npm dan nama dari textfield
+                  npmController.clear(),
+                  nameController.clear()
+                },
                 // Menggunakan row agar icon dan text tampil secara horizontal
                 child: const Row(
                   // Main axis alignment center berarti semua konten didalam row akan berada di tengah
@@ -148,8 +170,11 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 24),
+              // itemCount adalah jumlah dari item yang akan dibuat, disini menggunakan length dari list agar dinamis
               itemCount: dataList.length,
+              // itemBuilder adalah widget yang akan dibuat untuk setiap perulangan sesuai jumlah itemCount
               itemBuilder: (context, index) {
+                // Mengambil data dari list sesuai index
                 final data = dataList[index];
                 return Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4),

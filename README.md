@@ -21,6 +21,8 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
   - [Button](#button)
 - [ListView Widget](#listview-widget)
   - [ListView Builder](#listview-builder)
+  - [Implementasi Button](#implementasi-button)
+  - [Uji Coba Input Data](#uji-coba-input-data)
 - [Referensi](#referensi)
 
 ### Flutter Widget Lanjutan
@@ -235,7 +237,9 @@ Padding(
 
 ### ListView Widget
 
-Selanjutnya saya akan mengimplementasikan form dan button sebelumnya untuk menampilkan data di list menggunakan ListView
+Selanjutnya saya akan mengimplementasikan form dan button sebelumnya untuk menampilkan data di list menggunakan ListView. <br>
+
+ListView seperti column, widget tampil dari atas ke bawah secara vertical, namun dapat discroll sesuai dengan ukuran yang kita tentukan.
 
 #### ListView Builder
 
@@ -267,14 +271,43 @@ Setelah diselidiki, ternyata `ListView` tidak bisa langsung didalam child `Colum
 ```dart
 Expanded(
   child: ListView.builder(
-    itemCount: 1,
+    padding: const EdgeInsets.symmetric(horizontal: 24),
+    // itemCount adalah jumlah dari item yang akan dibuat, disini menggunakan length dari list agar dinamis
+    itemCount: dataList.length,
+    // itemBuilder adalah widget yang akan dibuat untuk setiap perulangan sesuai jumlah itemCount
     itemBuilder: (context, index) {
-      return Container(
-        color: Colors.grey.shade300,
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-          child: Column(
-            children: [Text("NPM"), Text("Nama")],
+      // Mengambil data dari list sesuai index
+      final data = dataList[index];
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: Colors.indigo.shade50,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: 24, vertical: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  data.npm!,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.indigo,
+                    fontSize: 18,
+                  ),
+                ),
+                Text(
+                  data.name!,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       );
@@ -282,6 +315,78 @@ Expanded(
   ),
 ),
 ```
+
+#### Implementasi Button
+
+Sebelumnya button belum diimplementasikan. Sekarang akan mengimplementasikan button agar setiap button diklik, maka data yang dimasukkan akan disimpan kedalam list agar bisa ditampilkan.
+
+```dart
+// Sebagai control dan untuk mengambil nilai TextField
+final npmController = TextEditingController();
+final nameController = TextEditingController();
+
+// Menyimpan list data
+List<Data> dataList = [];
+
+// Untuk menambahkan data ke list
+void addToDataList(String npm, String name) {
+  setState(() {
+    dataList.add(Data(npm: npm, name: name));
+  });
+}
+
+// Untuk membersihkan TextField saat state dimuat baru
+@override
+void dispose() {
+  npmController.dispose();
+  nameController.dispose();
+  super.dispose();
+}
+```
+
+```dart
+TextButton(
+  // Saat Tombol di klik, maka akan mengubah state dan menampilkan datanya di section bawah ini.
+  onPressed: () => {
+    // Menambahkan data ke list
+    addToDataList(npmController.text, nameController.text),
+    // Menghapus value npm dan nama dari textfield
+    npmController.clear(),
+    nameController.clear()
+  },
+  // Menggunakan row agar icon dan text tampil secara horizontal
+  child: const Row(
+    // Main axis alignment center berarti semua konten didalam row akan berada di tengah
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      // Widget Icon untuk menampilkan Icon yang sudah ada di Flutter
+      Icon(
+        Icons.send_rounded,
+        color: Colors.white,
+      ),
+      SizedBox(width: 8),
+      Text(
+        "Next",
+        style: TextStyle(color: Colors.white),
+      ),
+    ],
+  ),
+),
+```
+
+#### Uji Coba Input Data
+
+<p align="center">
+  <img src="./assets/insert-1.jpg" />
+</p>
+
+<p align="center">
+  <img src="./assets/insert-2.jpg" />
+</p>
+
+<p align="center">
+  <img src="./assets/insert-3.jpg" />
+</p>
 
 ### Referensi
 
