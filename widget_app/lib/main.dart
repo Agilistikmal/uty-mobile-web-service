@@ -16,9 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Widget App Demo',
         theme: ThemeData(
-          // Ini adalah tema basic untuk tampilan aplikasi kita
-          // Contohnya kita bisa mengubah tema warna dibawah ini menjadi merah
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
           useMaterial3: true,
         ),
         // Untuk menghilangkan banner debug di kanan atas

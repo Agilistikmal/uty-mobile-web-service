@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_app/model/data.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -8,6 +9,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Data> dataList = [];
+
+  void addToDataList(String npm, String name) {
+    setState(() {
+      dataList.add(Data(npm: npm, name: name));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: TextButton(
                 // Saat Tombol di klik, maka akan mengubah state dan menampilkan datanya di section bawah ini.
-                onPressed: () => {},
+                onPressed: () => {addToDataList("5220411040", "Agil")},
                 // Menggunakan row agar icon dan text tampil secara horizontal
                 child: const Row(
                   // Main axis alignment center berarti semua konten didalam row akan berada di tengah
@@ -134,7 +143,50 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.grey.shade300,
             width: MediaQuery.sizeOf(context).width,
             height: 4,
-          )
+          ),
+          const SizedBox(height: 16),
+          Expanded(
+            child: ListView.builder(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              itemCount: dataList.length,
+              itemBuilder: (context, index) {
+                final data = dataList[index];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.indigo.shade50,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 24, vertical: 8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            data.npm!,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.indigo,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            data.name!,
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );

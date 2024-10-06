@@ -19,6 +19,9 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
   - [Form Title](#form-title)
   - [Form Body](#form-body)
   - [Button](#button)
+- [ListView Widget](#listview-widget)
+  - [ListView Builder](#listview-builder)
+- [Referensi](#referensi)
 
 ### Flutter Widget Lanjutan
 
@@ -229,3 +232,58 @@ Padding(
 <p align="middle">
   <img src="./assets/button-1.jpg" />
 </p>
+
+### ListView Widget
+
+Selanjutnya saya akan mengimplementasikan form dan button sebelumnya untuk menampilkan data di list menggunakan ListView
+
+#### ListView Builder
+
+```dart
+ListView.builder(
+  itemCount: 1,
+  itemBuilder: (context, index) {
+    return Container(
+      color: Colors.grey.shade300,
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+        child: Column(
+          children: [Text("NPM"), Text("Nama")],
+        ),
+      ),
+    );
+  },
+)
+```
+
+Namun terdapat error seperti berikut.
+
+<p align="middle">
+  <img src="./assets/listview-error.jpg" />
+</p>
+
+Setelah diselidiki, ternyata `ListView` tidak bisa langsung didalam child `Column`, harus di wrap menggunakan widget `Expanded` terlebih dahulu. Jadi seperti berikut
+
+```dart
+Expanded(
+  child: ListView.builder(
+    itemCount: 1,
+    itemBuilder: (context, index) {
+      return Container(
+        color: Colors.grey.shade300,
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+          child: Column(
+            children: [Text("NPM"), Text("Nama")],
+          ),
+        ),
+      );
+    },
+  ),
+),
+```
+
+### Referensi
+
+https://api.flutter.dev/flutter/widgets/widgets-library.html <br>
+https://medium.com/@marketing_96275/how-to-create-and-design-buttons-in-flutter-81e87f709348
