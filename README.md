@@ -23,6 +23,10 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
   - [ListView Builder](#listview-builder)
   - [Implementasi Button](#implementasi-button)
   - [Uji Coba Input Data](#uji-coba-input-data)
+- [Navigation](#navigation)
+  - [Membuat Screen Baru](#membuat-screen-baru)
+  - [Implementasi Button Navigasi](#implementasi-button-navigasi)
+- [GridView](#gridview)
 - [Referensi](#referensi)
 
 ### Flutter Widget Lanjutan
@@ -386,6 +390,142 @@ TextButton(
 
 <p align="center">
   <img src="./assets/insert-3.jpg" />
+</p>
+
+### Navigation
+
+Flutter tentu saja bisa melakukan navigasi dari screen satu ke screen lainnya. <br>
+
+#### Membuat Screen Baru
+
+Saya membuat file atau screen baru bernama `another_screen.dart` didalam folder `screen`.
+
+```dart
+import 'package:flutter/material.dart';
+
+class AnotherScreen extends StatefulWidget {
+  const AnotherScreen({super.key});
+
+  @override
+  State<StatefulWidget> createState() => _AnotherScreenState();
+}
+
+class _AnotherScreenState extends State<AnotherScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Another Screen"),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
+      ),
+    );
+  }
+}
+```
+
+Sama seperti Home Screen, namun dibedakan appbar nya agar membedakan.
+
+#### Implementasi Button Navigasi
+
+Pada home screen, saya menambahkan tombol untuk navigasi ke halaman lain.
+
+```dart
+Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 24),
+  child: Container(
+    width: MediaQuery.sizeOf(context).width,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(8),
+      // Disini saya memberi warna tombol menjadi indigo dengan shade 50
+      color: Colors.indigo.shade50,
+    ),
+    child: TextButton(
+      // Saat Tombol di klik, maka akan pindah ke halaman AnotherScreen
+      onPressed: () => {
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const AnotherScreen(),
+        ))
+      },
+      // Menggunakan row agar icon dan text tampil secara horizontal
+      child: const Row(
+        // Main axis alignment center berarti semua konten didalam row akan berada di tengah
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Widget Icon untuk menampilkan Icon yang sudah ada di Flutter
+          Icon(
+            Icons.navigate_next,
+            color: Colors.indigo,
+          ),
+          SizedBox(width: 8),
+          Text(
+            "Go to another page",
+            style: TextStyle(color: Colors.indigo),
+          ),
+        ],
+      ),
+    ),
+  ),
+),
+```
+
+<p align="center">
+  <img src="./assets/nav-1.jpg" />
+</p>
+
+<p align="center">
+  <img src="./assets/nav-2.jpg" />
+</p>
+
+### GridView
+
+GridView pada dart berguna untuk layouting, grid menentukan jumlah item secara horizontal dibagi dengan 3 misalnya. Maka dalam 1 baris horizontal hanya akan terdapat 3 item, dan sisanya akan diletakkan dibawah.
+
+```dart
+GridView(
+  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+    // Menentukan maksimal 1 garis horizontal ada berapa item
+    crossAxisCount: 3,
+  ),
+  children: [
+    Container(
+      color: Colors.red,
+      alignment: Alignment.center,
+      child: const Text(
+        "Child 1",
+        style: TextStyle(color: Colors.white, fontSize: 24),
+      ),
+    ),
+    Container(
+      color: Colors.yellow,
+      alignment: Alignment.center,
+      child: const Text(
+        "Child 2",
+        style: TextStyle(color: Colors.white, fontSize: 24),
+      ),
+    ),
+    Container(
+      color: Colors.green,
+      alignment: Alignment.center,
+      child: const Text(
+        "Child 3",
+        style: TextStyle(color: Colors.white, fontSize: 24),
+      ),
+    ),
+    Container(
+      color: Colors.blue,
+      alignment: Alignment.center,
+      child: const Text(
+        "Child 4",
+        style: TextStyle(color: Colors.white, fontSize: 24),
+      ),
+    )
+  ],
+),
+```
+
+<p align="center">
+  <img src="./assets/grid-1.jpg" />
 </p>
 
 ### Referensi

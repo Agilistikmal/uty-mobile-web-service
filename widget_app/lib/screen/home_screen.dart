@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_app/model/data.dart';
+import 'package:widget_app/screen/another_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -212,6 +213,48 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
+          const SizedBox(
+            height: 24,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Container(
+              width: MediaQuery.sizeOf(context).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                // Disini saya memberi warna tombol menjadi indigo dengan shade 50
+                color: Colors.indigo.shade50,
+              ),
+              child: TextButton(
+                // Saat Tombol di klik, maka akan pindah ke halaman AnotherScreen
+                onPressed: () => {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AnotherScreen(),
+                  ))
+                },
+                // Menggunakan row agar icon dan text tampil secara horizontal
+                child: const Row(
+                  // Main axis alignment center berarti semua konten didalam row akan berada di tengah
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Widget Icon untuk menampilkan Icon yang sudah ada di Flutter
+                    Icon(
+                      Icons.navigate_next,
+                      color: Colors.indigo,
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      "Go to another page",
+                      style: TextStyle(color: Colors.indigo),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 24,
+          )
         ],
       ),
     );
