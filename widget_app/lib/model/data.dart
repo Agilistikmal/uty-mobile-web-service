@@ -1,6 +1,9 @@
-class Data {
-  String? npm;
-  String? name;
+import 'dart:ffi';
 
-  Data({this.npm, this.name});
+class Data {
+  String? image;
+  String? name;
+  String? price;
+
+  Data({this.image, this.name, this.price});
 }

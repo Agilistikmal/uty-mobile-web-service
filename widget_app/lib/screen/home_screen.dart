@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widget_app/model/data.dart';
-import 'package:widget_app/screen/another_screen.dart';
+import 'package:widget_app/screen/dashboard_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,24 +10,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   // Sebagai control dan untuk mengambil nilai TextField
-  final npmController = TextEditingController();
-  final nameController = TextEditingController();
-
-  // Menyimpan list data
-  List<Data> dataList = [];
-
-  // Untuk menambahkan data ke list
-  void addToDataList(String npm, String name) {
-    setState(() {
-      dataList.add(Data(npm: npm, name: name));
-    });
-  }
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   // Untuk membersihkan TextField saat state dimuat baru
   @override
   void dispose() {
-    npmController.dispose();
-    nameController.dispose();
+    usernameController.dispose();
+    passwordController.dispose();
     super.dispose();
   }
 
@@ -38,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         // Center digunakan agar text tampil di posisi tengah
         title: const Center(
-          child: Text("Widget App Part 2"),
+          child: Text("Welcome"),
         ),
         backgroundColor: Colors.indigo,
         // Foreground disini adalah warna untuk Text
@@ -46,7 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          const SizedBox(height: 50),
+          const Image(
+            image: AssetImage("assets/logo.png"),
+            height: 250,
+          ),
           Padding(
             // Padding menggunakan symmetric agar bisa mengatur horizontal dan vertical yang berbeda.
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
@@ -60,15 +52,16 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                   // circular artinya disemua sisi memiliki radius yang sama
                   borderRadius: BorderRadius.circular(8),
-                  color: Colors.indigo.shade50),
+                  color: Colors.indigo),
               child: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                 child: Text(
-                  "Masukkan Identitas Anda",
+                  "Login",
                   style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.indigo,
-                      fontWeight: FontWeight.w500),
+                    fontSize: 24,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -87,15 +80,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     // Untuk styling TextField menggunakan InputDecoration
                     decoration: const InputDecoration(
                       // LabelText adalah judul dari inputan
-                      labelText: "Nama",
+                      labelText: "Username",
                       // HintText adalah placeholder/bantuan pengisian data
-                      hintText: "Masukkan nama...",
+                      hintText: "Masukkan username...",
                       // Disini saya menghilangkan border agar lebih simple
                       border: UnderlineInputBorder(
                         borderSide: BorderSide.none,
                       ),
                     ),
-                    controller: nameController,
+                    controller: usernameController,
                   )),
             ),
           ),
@@ -111,18 +104,37 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: TextField(
+                    obscureText: true,
                     decoration: const InputDecoration(
-                      labelText: "NPM",
-                      hintText: "Masukkan NPM...",
+                      labelText: "Password",
+                      hintText: "Masukkan P@ssw0rd...",
                       border: UnderlineInputBorder(
                         borderSide: BorderSide.none,
                       ),
                     ),
-                    controller: npmController,
+                    controller: passwordController,
                   )),
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(
+            height: 2,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                TextButton(
+                  onPressed: () => {},
+                  child: const Text(
+                    "Lupa Password?",
+                    style: TextStyle(color: Colors.indigo),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 2),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Container(
@@ -133,13 +145,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.indigo,
               ),
               child: TextButton(
-                // Saat Tombol di klik, maka akan mengubah state dan menampilkan datanya di section bawah ini.
+                // Saat Tombol di klik, maka akan mengirim datanya ke DashboardScreen
                 onPressed: () => {
-                  // Menambahkan data ke list
-                  addToDataList(npmController.text, nameController.text),
-                  // Menghapus value npm dan nama dari textfield
-                  npmController.clear(),
-                  nameController.clear()
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => DashboardScreen(
+                        username: usernameController,
+                        password: passwordController,
+                      ),
+                    ),
+                  )
                 },
                 // Menggunakan row agar icon dan text tampil secara horizontal
                 child: const Row(
@@ -153,7 +168,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     SizedBox(width: 8),
                     Text(
-                      "Next",
+                      "Login",
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -161,100 +176,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 24),
-          Container(
-            color: Colors.grey.shade300,
-            width: MediaQuery.sizeOf(context).width,
-            height: 4,
-          ),
-          const SizedBox(height: 16),
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              // itemCount adalah jumlah dari item yang akan dibuat, disini menggunakan length dari list agar dinamis
-              itemCount: dataList.length,
-              // itemBuilder adalah widget yang akan dibuat untuk setiap perulangan sesuai jumlah itemCount
-              itemBuilder: (context, index) {
-                // Mengambil data dari list sesuai index
-                final data = dataList[index];
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.indigo.shade50,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 24, vertical: 8),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            data.npm!,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.indigo,
-                              fontSize: 18,
-                            ),
-                          ),
-                          Text(
-                            data.name!,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
           const SizedBox(
-            height: 24,
+            height: 8,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Container(
-              width: MediaQuery.sizeOf(context).width,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                // Disini saya memberi warna tombol menjadi indigo dengan shade 50
-                color: Colors.indigo.shade50,
-              ),
-              child: TextButton(
-                // Saat Tombol di klik, maka akan pindah ke halaman AnotherScreen
-                onPressed: () => {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const AnotherScreen(),
-                  ))
-                },
-                // Menggunakan row agar icon dan text tampil secara horizontal
-                child: const Row(
-                  // Main axis alignment center berarti semua konten didalam row akan berada di tengah
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Widget Icon untuk menampilkan Icon yang sudah ada di Flutter
-                    Icon(
-                      Icons.navigate_next,
-                      color: Colors.indigo,
-                    ),
-                    SizedBox(width: 8),
-                    Text(
-                      "Go to another page",
-                      style: TextStyle(color: Colors.indigo),
-                    ),
-                  ],
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Belum punya akun?"),
+              TextButton(
+                onPressed: () => {},
+                child: const Text(
+                  "Register disini",
+                  style: TextStyle(color: Colors.indigo),
                 ),
-              ),
-            ),
+              )
+            ],
           ),
-          const SizedBox(
-            height: 24,
-          )
         ],
       ),
     );
