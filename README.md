@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Data Diri
 
 =======
@@ -7,10 +8,20 @@
 
 ### Data Diri
 >>>>>>> Pertemuan-1
+=======
+# Pertemuan 2 <!-- omit in toc -->
+
+26 September 2024 <br>
+_Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
+
+### Data Diri
+
+>>>>>>> origin/Pertemuan-2
 | Nama                | NPM        |
 | ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Daftar Isi
@@ -446,125 +457,261 @@ Pilih Device yang ingin digunakan. Lalu jalankan `flutter run` di terminal.
 ---
 
 =======
+=======
+### Daftar Isi
+>>>>>>> origin/Pertemuan-2
 
+- [Data Diri](#data-diri)
+- [Daftar Isi](#daftar-isi)
+- [Flutter Widget](#flutter-widget)
+  - [Stateless dan Stateful Widget](#stateless-dan-stateful-widget)
+  - [MaterialApp Widget](#materialapp-widget)
+  - [Scaffold Widget](#scaffold-widget)
+  - [AppBar Widget](#appbar-widget)
+  - [Center](#center)
+  - [Column](#column)
+  - [FloatingActionButton Widget](#floatingactionbutton-widget)
+  - [Menambahkan TextField](#menambahkan-textfield)
+- [Referensi](#referensi)
 
---- 
+### Flutter Widget
 
-### 1. Review Bahasa Pemrograman
-<img src="./assets/1.jpg" />
-Ada banyak bahasa pemrograman serta framework yang sering digunakan untuk keperluan mobile dan web service. Ada bahasa pemrograman yang secara langsung bisa digunakan untuk membuat aplikasi mobile (Android/iOS) maupun yang memerlukan bantuan framework atau library untuk membuat aplikasi mobile Android/iOS atau multi-platform (Android/iOS/Desktop).
+Widget adalah hal yang akan sering dijumpai saat membuat aplikasi menggunakan flutter. Semua komponen didalam flutter disebut sebagai widget. <br>
+Contohnya saat ingin menampilkan tulisan menggunakan widget Text. <br>
+Dibawah ini adalah penjelasan singkat tentang widget dari _default project_ flutter.
 
-#### Mobile Client
-Mobile Client adalah aplikasi yang menampilkan tampilan kepada user melalui device Android atau iOS. Beberapa bahasa pemrograman yang populer digunakan sebagai berikut:
-- Java
-- Kotlin
-- Javascript (menggunakan React Native)
-- Dart (menggunakan Flutter)
+#### Stateless dan Stateful Widget
 
-#### Web Client
-Web Client adalah aplikasi yang menampilkan tampilan kepada user melalui browser. Banyak library/framework populer saat ini yang memakai bahasa pemrograman JavaScript sebagai dasar atau inti dari teknologi mereka, karena saat ini hanya JavaScript yang bisa berjalan langsung di browser. Namun, bahasa pemrograman seperti PHP juga tetap masih banyak yang menggunakan.
-- PHP
-- PHP framework (Laravel, Codeigniter, dan lain lain)
-- Javascript
-- Javascript library/framework (React, Angular, Svelte, Vue, dan lain lain)
+Sebelum masuk lebih dalam, ada 2 jenis utama dalam widget. Yaitu stateless dan stateful widget. <br>
+**Stateless Widget** <br>
+Stateless widget adalah widget yang nilai dari widget tersebut bernilai tetap atau statis tidak dapat berubah ketika sudah ditampilkan. <br>
 
-#### Web Server
-- Javascript/Typescript (NodeJS, Bun, Deno, dan lain lain)
-- Javascript/Typescript framework (ExpressJS, NextJS, NestJS, Hono, ElysiaJS, dan lain lain)
-- Go
-- Go framework (Fiber, Gin, dan lain lain)
-- Python
-- Python framework (Django, Flask, dan lain lain)
+```dart
+// Stateless artinya tidak ada perubahan yang dinamis alias statis
+// Tidak memerlukan state yang value nya bisa berubah-ubah
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-### 1.1 Review Beberapa Bahasa Pemrograman Yang Pernah Digunakan
+  // build adalah root atau jalur utama dari aplikasi kita
+  @override
+  Widget build(BuildContext context) {
+    return ...
+  }
+}
+```
 
-#### 1.1.1 Java
+**Stateful Widget** <br>
+Sebaliknya, stateful widget berarti nilai didalam widget tersebut dapat berubah saat sudah ditampilkan. Contohnya nilai angka yang bisa berubah saat menekan suatu tombol.
+
+```dart
+// Stateful artinya dinamis
+// ada state yang value nya bisa berubah-ubah
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  // nilai ini akan berubah saat menekan tombol
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // Saat function ini dijalankan (dengan mengklik tombol)
+      // maka nilai counter akan bertambah
+      _counter++;
+    });
+  }
+
+  // build disini akan selalu dibuild ulang saat ada state yang berubah
+  @override
+  Widget build(BuildContext context) {
+    return ...
+  }
+}
+```
+
+#### MaterialApp Widget
+
+MaterialApp adalah tema yang dimiliki oleh google itu sendiri. Dengan widget ini kita bisa mengatur tema terkair aplikasi kita seperti title, colorScheme, dan lain lain.
+
+```dart
+MaterialApp(
+  title: 'Widget App Demo',
+  theme: ThemeData(
+    // Ini adalah tema basic untuk tampilan aplikasi kita
+    // Contohnya kita bisa mengubah tema warna dibawah ini menjadi merah
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+    useMaterial3: true,
+  ),
+  home: const MyHomePage(
+    // Ini adalah title pada bagian atas aplikasi
+    title: 'Widget App Demo',
+  ),
+);
+```
+
+Terlihat didalam widget MaterialApp sendiri juga terdapat widget widget lainnya seperti ThemeData untuk mengisi nilai tema tersebut, dan ColorScheme untuk menentukan warna.
+
+#### Scaffold Widget
+
+Scaffold biasa digunakan sebagai kanvas putih kosong. Didalam scaffold, banyak widget yang bisa ditambahkan.
+
+```dart
+Scaffold(
+  appBar: ...
+  body: ...
+  floatingActionButton: ...
+);
+```
+
+#### AppBar Widget
+
+AppBar adalah widget untuk menampilkan text diposisi atas. Berguna sebagai informasi halaman saat ini.
+
+```dart
+AppBar(
+  // Background color disini mengambil value dari colorScheme sebelumnya
+  // namun warna akan diinverse agar lebih soft
+  backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+  // widget.title disini mengambil dari value yang ada di MyHomePage diatas
+  title: Text(widget.title),
+),
+```
+
+AppBar juga memerlukan widget Text untuk menampilkan tulisan.
+
 <p align="center">
-  <img src="./assets/java.png" height="100">
+  <img src="./assets/appbar-1.jpg" />
 </p>
 
-Bahasa Pemrograman Java adalah bahasa yang pertama kali saya pelajari saat mengenal dunia pemrograman. Saat itu saya masih menjadi siswa SMP. <br>
-Tentu saja, saya sebagai anak SMP, java sangat membingungkan pada saat itu. Awalnya saya mempelajari bagaimana cara membuat plugin untuk game [Minecraft](https://minecraft.net). Saya mencari dan meniru tutorial yang ada di YouTube. <br>
-Sekarang saya tidak terlalu kesulitan seperti dulu untuk menggunakan Bahasa Pemrograman Java. <br>
-Karena pertama kali terjun ke dunia pemrograman menggunakan Java, saya merasa lebih mudah untuk mempelajari bahasa pemrograman lainnya karena Java adalah bahasa pemrograman yang terbilang komplit dan banyak menginspirasi bahasa pemrograman baru lainnya.
+#### Center
 
-#### 1.1.2 Javascript 
+Center digunakan untuk memposisikan child ke posisi tengah layar secara horizontal dan vertical.
+
+```dart
+Center(
+  // Center untuk mempositikan ke tengah secara horizontal dan vertical
+  // Child adalah isi yang akan berada diposisi tengah
+  child: ...
+),
+```
+
+#### Column
+
+Column digunakan untuk membuat banyak widget berurutan kebawah.
+
+```dart
+Column(
+  // Column adalah kolom yang berisi widget widget lainnya
+  // Bisa diatur posisinya
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: <Widget>[
+    const Text(
+      'Tombol diklik sebanyak',
+    ),
+    Text(
+      '$_counter kali',
+      style: Theme.of(context).textTheme.headlineMedium,
+    ),
+  ],
+),
+```
+
+tambahkan const didepan widget text jika text statis, dan apabila text bisa berubah maka tidak ditambahkan const.
+
 <p align="center">
-  <img src="./assets/javascript.png" height="100">
+  <img src="./assets/column-1.jpg" />
 </p>
 
-Bahasa Pemrograman ke-2 yang saya pelajari adalah JavaScript. Dulu saya berpikir Java dan JavaScript adalah Bahasa Pemrograman yang sama, namun ternyata JavaScript berbeda dari Java. <br>
+#### FloatingActionButton Widget
 
-Saya belajar JavaScript untuk belajar membuat website yang interaktif, karena JavaScript adalah bahasa yang dapat berjalan di browser secara langsung. <br>
+Widget ini adalah tombol yang berada dikanan bawah. Pada aplikasi ini, saat tombol ini ditekan maka akan menambahkan value dari jumlah berapa kali tombol ini ditekan.
 
-Saya tetap kesulitan, namun tidak sesulit saat mempelajari Java. Karena banyak syntax syntax yang cara penulisannya mirip dengan Java. Namun, JavaScript tidak memerlukan dan dapat berjalan tanpa class dan main function.
+```dart
+FloatingActionButton(
+  onPressed: _incrementCounter,
+  tooltip: 'Increment',
+  child: const Icon(Icons.add),
+),
+```
 
-#### 1.1.3 TypeScript
 <p align="center">
-  <img src="./assets/typescript.png" height="100">
+  <img src="./assets/floating-1.jpg" />
 </p>
 
-Karena permasalahan di Javascript, saya memutuskan untuk mempelajari bahasa pemrograman ke-3 saya yaitu TypeScript. <br>
+#### Menambahkan TextField
 
-Javascript memiliki masalah pada typesafe. Javascript tidak strict terhadap tipe data yang tidak terdeteksi error saat melakukan coding, namun bisa error saat dijalankan, dan itu sangat merepotkan untuk mencari titik kesalahan. <br>
+Saatnya eksperimen, saya akan menambahkan text field untuk menginput nama dan akan ditampilkan saat text diubah. <br>
+Untuk membuat text field bisa menggunakan widget `TextField`. Saya juga membuat state baru untuk menyimpan data nama.
 
-Saya mencari solusi dan menemukan jawaban bahwa TypeScript adalah solusi untuk masalah tersebut.
+```dart
+String _name = "";
 
-#### 1.1.4 Python
+void _setName(String value) {
+  setState(() {
+    _name = value;
+  });
+}
+```
+
+```dart
+TextField(
+  decoration: const InputDecoration(hintText: "Masukkan nama..."),
+  onChanged: (value) {
+    _setName(value);
+  },
+),
+```
+
+`onChanged` akan dijalankan saat ada perubahan huruf di TextField. perlu diperhatikan saat deklarasi widget yang dapat berubah tidak menggunakan const. Sebelumnya saya mendapat error tidak bisa menggunakan `onChanged`.
+
 <p align="center">
-  <img src="./assets/python.png" height="100">
+  <img src="./assets/textfield-1.jpg" />
 </p>
 
-Masuk ke era Machine Learning dan AI, saya penasaran dan mempelajari bahasa pemrograman ke-4 saya yaitu Python. <br>
+TextField saya masukkan ke dalam widget Padding untuk memberikan jarak horizontal.
 
-Saat pertama kali mempelajari Python, saya kaget karena syntax dan style cara menulis kode python sangat berbeda dari 3 bahasa yang sebelumnya saya pelajari. <br>
+```dart
+<Widget>[
+  Padding(
+    padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 50),
+    child: TextField(
+      decoration: const InputDecoration(hintText: "Masukkan nama..."),
+      onChanged: (value) {
+        _setName(value);
+      },
+    ),
+  ),
+  Text(
+    '$_name mengklik sebanyak',
+  ),
+  Text(
+    '$_counter kali',
+    style: Theme.of(context).textTheme.headlineMedium,
+  ),
+],
+```
 
-Python lebih menggunakan ":" dibanding "{ }" untuk class, function, serta looping. <br>
-
-Sedikit membingungkan diawal, namun terasa simple saat sudah memahaminya.
-
-#### 1.1.5 Golang (Favorit)
 <p align="center">
-  <img src="./assets/golang.png" height="100">
+  <img src="./assets/textfield-2.jpg" />
 </p>
 
-Penasaran dengan kepopuleran bahasa pemrograman Go, saya pun mempelajari Golang sebagai bahasa pemrograman ke-5 saya. Dan saat ini menjadi bahasa pemrograman favorit saya. <br>
-
-Golang dikenal dengan kecepatannya. Namun yang membuat saya menjadikan Golang bahasa pemrograman favorit adalah Simple, Strict, Safe. <br>
-
-Syntax Golang memang terlihat tidak simple, namun menurut saya itu adalah syntax yang mudah dimengerti. <br>
-
-Golang adalah bahasa pemrograman yang sangat strict, error akan diketahui saat melakukan coding, dan minim error yang tidak terduga setelah aplikasi dijalankan. <br>
-
-Saya biasa menggunakan Go untuk membuat backend API tanpa menggunakan framework, karena built-in package golang sudah sangat mencukupi.
-
-#### 1.1.6 Kotlin
 <p align="center">
-  <img src="./assets/kotlin.png" height="100">
+  <img src="./assets/textfield-3.jpg" />
 </p>
 
-Tidak puas di web, saya mempelajari Kotlin sebagai bahasa pemrograman saya ke-6 untuk membuat aplikasi mobile Android. <br>
+### Referensi
 
-Aplikasi Android juga bisa dibuat menggunakan Kotlin, karena Kotlin berjalan di Java Virtual Machine. <br>
-
-#### 1.1.7 Dart
-<p align="center">
-  <img src="./assets/dart.png" height="100">
-</p>
-
-Ingin agar aplikasi android juga berjalan di iOS, saya mempelajari bahasa pemrograman Dart sebagai bahasa pemrograman ke-7 saya, dan menggunakan framework Flutter untuk membuat aplikasi multi-platform. <br>
-
-Flutter sangat memudahkan untuk membuat aplikasi multi-platform, syntax yang sederhana dan mengandalkan widget untuk membuat fungsionalitas aplikasi.
-
-#### 1.1.8 Rust
-<p align="center">
-  <img src="./assets/rust.svg" height="100">
-</p>
-
-Rust adalah bahasa pemrograman yang sedang saya pelajari sekarang. Rust terkenal dengan kecepatannya yang katanya mengalahkan Golang. <br>
+https://api.flutter.dev/flutter/widgets/widgets-library.html
 
 ---
 
+<<<<<<< HEAD
 >>>>>>> Pertemuan-1
 ### 4. Program Hello World Di Beberapa Bahasa Pemrograman
 
@@ -3124,3 +3271,6 @@ https://gorm.io/ <br>
 =======
 Untuk sekedar menampilkan "Hello World", Rust memang terlihat mudah. Namun, untuk kasus lainnya Rust terkesan kompleks.
 >>>>>>> Pertemuan-1
+=======
+_5220411040 - Agil Ghani Istikmal_
+>>>>>>> origin/Pertemuan-2
