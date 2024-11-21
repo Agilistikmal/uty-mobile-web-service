@@ -39,6 +39,11 @@
 | ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
+# Disclaimer
+
+Untuk kode program ada di repository berikut: <br>
+- Flutter: https://github.com/Agilistikmal/uty-mobile-web-service/
+- REST Api: https://github.com/Agilistikmal/uty-mobile-web-service-api/
 
 # Daftar Isi
 - [Data Diri](#data-diri)
