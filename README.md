@@ -1,40 +1,50 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+<div>
+  <h1 align="center">
+  Laporan Hasil Belajar <br>
+  Mobile & Web Service
+  </h1>
+
+  <br>
+  <br>
+  <br>
+
+  <p align="center">
+    <img src="./assets/logo_uty.png" width="200" />
+  </p>
+
+   <br>
+  <br>
+  <br>
+
+  <p align="center">
+    Disusun oleh: <br>
+    Agil Ghani Istikmal
+  </p>
+
+   <br>
+  <br>
+  <br>
+
+  <h3 align="center">
+  Program Studi Informatika <br>
+  Fakultas Sains Dan Teknologi <br>
+  Universitas Teknologi Yogyakarta <br>
+  2024
+  </h3>
+</div>
+
 # Data Diri
 
-=======
-# Pertemuan 1
-19 September 2024
-
-### Data Diri
->>>>>>> Pertemuan-1
-=======
-# Pertemuan 2 <!-- omit in toc -->
-
-26 September 2024 <br>
-_Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
-
-### Data Diri
-
->>>>>>> origin/Pertemuan-2
 | Nama                | NPM        |
 | ------------------- | ---------- |
 | Agil Ghani Istikmal | 5220411040 |
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 # Daftar Isi
 - [Data Diri](#data-diri)
 - [Daftar Isi](#daftar-isi)
 - [Pertemuan 1](#pertemuan-1)
     - [Data Diri](#data-diri-1)
-=======
-#### Daftar Isi
-- [Pertemuan 1](#pertemuan-1)
-    - [Data Diri](#data-diri)
-      - [Daftar Isi](#daftar-isi)
->>>>>>> Pertemuan-1
     - [1. Review Bahasa Pemrograman](#1-review-bahasa-pemrograman)
       - [Mobile Client](#mobile-client)
       - [Web Client](#web-client)
@@ -48,13 +58,10 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
       - [1.1.6 Kotlin](#116-kotlin)
       - [1.1.7 Dart](#117-dart)
       - [1.1.8 Rust](#118-rust)
-<<<<<<< HEAD
     - [2. Menginstall Flutter](#2-menginstall-flutter)
       - [2.1 Android Studio](#21-android-studio)
       - [2.2 Flutter](#22-flutter)
     - [3. Mencoba Android Studio dan Flutter](#3-mencoba-android-studio-dan-flutter)
-=======
->>>>>>> Pertemuan-1
     - [4. Program Hello World Di Beberapa Bahasa Pemrograman](#4-program-hello-world-di-beberapa-bahasa-pemrograman)
       - [4.1 Java](#41-java)
       - [4.2 Javascript](#42-javascript)
@@ -64,7 +71,6 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
       - [4.6 Kotlin](#46-kotlin)
       - [4.7 Dart](#47-dart)
       - [4.8 Rust](#48-rust)
-<<<<<<< HEAD
 - [Pertemuan 2](#pertemuan-2)
     - [Data Diri](#data-diri-2)
     - [Flutter Widget](#flutter-widget)
@@ -171,6 +177,7 @@ _Note: Kode lengkap aplikasi ini ada di folder github "widget_app"_
     - [WebView Xendit/Payment](#webview-xenditpayment)
     - [Confirm/Refresh Payment Status](#confirmrefresh-payment-status)
   - [Referensi](#referensi-3)
+- [Referensi Keseluruhan](#referensi-keseluruhan)
 
 
 # Pertemuan 1 
@@ -456,263 +463,6 @@ Pilih Device yang ingin digunakan. Lalu jalankan `flutter run` di terminal.
 
 ---
 
-=======
-=======
-### Daftar Isi
->>>>>>> origin/Pertemuan-2
-
-- [Data Diri](#data-diri)
-- [Daftar Isi](#daftar-isi)
-- [Flutter Widget](#flutter-widget)
-  - [Stateless dan Stateful Widget](#stateless-dan-stateful-widget)
-  - [MaterialApp Widget](#materialapp-widget)
-  - [Scaffold Widget](#scaffold-widget)
-  - [AppBar Widget](#appbar-widget)
-  - [Center](#center)
-  - [Column](#column)
-  - [FloatingActionButton Widget](#floatingactionbutton-widget)
-  - [Menambahkan TextField](#menambahkan-textfield)
-- [Referensi](#referensi)
-
-### Flutter Widget
-
-Widget adalah hal yang akan sering dijumpai saat membuat aplikasi menggunakan flutter. Semua komponen didalam flutter disebut sebagai widget. <br>
-Contohnya saat ingin menampilkan tulisan menggunakan widget Text. <br>
-Dibawah ini adalah penjelasan singkat tentang widget dari _default project_ flutter.
-
-#### Stateless dan Stateful Widget
-
-Sebelum masuk lebih dalam, ada 2 jenis utama dalam widget. Yaitu stateless dan stateful widget. <br>
-**Stateless Widget** <br>
-Stateless widget adalah widget yang nilai dari widget tersebut bernilai tetap atau statis tidak dapat berubah ketika sudah ditampilkan. <br>
-
-```dart
-// Stateless artinya tidak ada perubahan yang dinamis alias statis
-// Tidak memerlukan state yang value nya bisa berubah-ubah
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // build adalah root atau jalur utama dari aplikasi kita
-  @override
-  Widget build(BuildContext context) {
-    return ...
-  }
-}
-```
-
-**Stateful Widget** <br>
-Sebaliknya, stateful widget berarti nilai didalam widget tersebut dapat berubah saat sudah ditampilkan. Contohnya nilai angka yang bisa berubah saat menekan suatu tombol.
-
-```dart
-// Stateful artinya dinamis
-// ada state yang value nya bisa berubah-ubah
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  // nilai ini akan berubah saat menekan tombol
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // Saat function ini dijalankan (dengan mengklik tombol)
-      // maka nilai counter akan bertambah
-      _counter++;
-    });
-  }
-
-  // build disini akan selalu dibuild ulang saat ada state yang berubah
-  @override
-  Widget build(BuildContext context) {
-    return ...
-  }
-}
-```
-
-#### MaterialApp Widget
-
-MaterialApp adalah tema yang dimiliki oleh google itu sendiri. Dengan widget ini kita bisa mengatur tema terkair aplikasi kita seperti title, colorScheme, dan lain lain.
-
-```dart
-MaterialApp(
-  title: 'Widget App Demo',
-  theme: ThemeData(
-    // Ini adalah tema basic untuk tampilan aplikasi kita
-    // Contohnya kita bisa mengubah tema warna dibawah ini menjadi merah
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-    useMaterial3: true,
-  ),
-  home: const MyHomePage(
-    // Ini adalah title pada bagian atas aplikasi
-    title: 'Widget App Demo',
-  ),
-);
-```
-
-Terlihat didalam widget MaterialApp sendiri juga terdapat widget widget lainnya seperti ThemeData untuk mengisi nilai tema tersebut, dan ColorScheme untuk menentukan warna.
-
-#### Scaffold Widget
-
-Scaffold biasa digunakan sebagai kanvas putih kosong. Didalam scaffold, banyak widget yang bisa ditambahkan.
-
-```dart
-Scaffold(
-  appBar: ...
-  body: ...
-  floatingActionButton: ...
-);
-```
-
-#### AppBar Widget
-
-AppBar adalah widget untuk menampilkan text diposisi atas. Berguna sebagai informasi halaman saat ini.
-
-```dart
-AppBar(
-  // Background color disini mengambil value dari colorScheme sebelumnya
-  // namun warna akan diinverse agar lebih soft
-  backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-  // widget.title disini mengambil dari value yang ada di MyHomePage diatas
-  title: Text(widget.title),
-),
-```
-
-AppBar juga memerlukan widget Text untuk menampilkan tulisan.
-
-<p align="center">
-  <img src="./assets/appbar-1.jpg" />
-</p>
-
-#### Center
-
-Center digunakan untuk memposisikan child ke posisi tengah layar secara horizontal dan vertical.
-
-```dart
-Center(
-  // Center untuk mempositikan ke tengah secara horizontal dan vertical
-  // Child adalah isi yang akan berada diposisi tengah
-  child: ...
-),
-```
-
-#### Column
-
-Column digunakan untuk membuat banyak widget berurutan kebawah.
-
-```dart
-Column(
-  // Column adalah kolom yang berisi widget widget lainnya
-  // Bisa diatur posisinya
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: <Widget>[
-    const Text(
-      'Tombol diklik sebanyak',
-    ),
-    Text(
-      '$_counter kali',
-      style: Theme.of(context).textTheme.headlineMedium,
-    ),
-  ],
-),
-```
-
-tambahkan const didepan widget text jika text statis, dan apabila text bisa berubah maka tidak ditambahkan const.
-
-<p align="center">
-  <img src="./assets/column-1.jpg" />
-</p>
-
-#### FloatingActionButton Widget
-
-Widget ini adalah tombol yang berada dikanan bawah. Pada aplikasi ini, saat tombol ini ditekan maka akan menambahkan value dari jumlah berapa kali tombol ini ditekan.
-
-```dart
-FloatingActionButton(
-  onPressed: _incrementCounter,
-  tooltip: 'Increment',
-  child: const Icon(Icons.add),
-),
-```
-
-<p align="center">
-  <img src="./assets/floating-1.jpg" />
-</p>
-
-#### Menambahkan TextField
-
-Saatnya eksperimen, saya akan menambahkan text field untuk menginput nama dan akan ditampilkan saat text diubah. <br>
-Untuk membuat text field bisa menggunakan widget `TextField`. Saya juga membuat state baru untuk menyimpan data nama.
-
-```dart
-String _name = "";
-
-void _setName(String value) {
-  setState(() {
-    _name = value;
-  });
-}
-```
-
-```dart
-TextField(
-  decoration: const InputDecoration(hintText: "Masukkan nama..."),
-  onChanged: (value) {
-    _setName(value);
-  },
-),
-```
-
-`onChanged` akan dijalankan saat ada perubahan huruf di TextField. perlu diperhatikan saat deklarasi widget yang dapat berubah tidak menggunakan const. Sebelumnya saya mendapat error tidak bisa menggunakan `onChanged`.
-
-<p align="center">
-  <img src="./assets/textfield-1.jpg" />
-</p>
-
-TextField saya masukkan ke dalam widget Padding untuk memberikan jarak horizontal.
-
-```dart
-<Widget>[
-  Padding(
-    padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 50),
-    child: TextField(
-      decoration: const InputDecoration(hintText: "Masukkan nama..."),
-      onChanged: (value) {
-        _setName(value);
-      },
-    ),
-  ),
-  Text(
-    '$_name mengklik sebanyak',
-  ),
-  Text(
-    '$_counter kali',
-    style: Theme.of(context).textTheme.headlineMedium,
-  ),
-],
-```
-
-<p align="center">
-  <img src="./assets/textfield-2.jpg" />
-</p>
-
-<p align="center">
-  <img src="./assets/textfield-3.jpg" />
-</p>
-
-### Referensi
-
-https://api.flutter.dev/flutter/widgets/widgets-library.html
-
----
-
-<<<<<<< HEAD
->>>>>>> Pertemuan-1
 ### 4. Program Hello World Di Beberapa Bahasa Pemrograman
 
 Berikut adalah cara penulisan kode untuk menampilkan text "Hello World" di beberapa bahasa pemrograman.
@@ -724,16 +474,11 @@ class Contoh {
     public static void main(String []args) {
         System.out.println("Hello World");
     }
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> Pertemuan-1
 ```
 
 Seperti kode diatas, untum menampilkan "Hello World" saja memerlukan beberapa step, mulai dari class, main function, dan memanggil fungsi println.
 
-<<<<<<< HEAD
 ```java
 // Error
 class Contoh {
@@ -750,12 +495,6 @@ Banyak programmer pemula yang mendapatkan error karena hal kecil seperti titik k
 
 ```js
 console.log("Hello World");
-=======
-#### 4.2 Javascript
-
-```js
-console.log("Hello World")
->>>>>>> Pertemuan-1
 ```
 
 Javascript tidak memerlukan class dan main function untuk menajalankan program. Cukup langsung memanggil fungsi console.log("text") sudah bisa menampilkan suatu text.
@@ -763,11 +502,7 @@ Javascript tidak memerlukan class dan main function untuk menajalankan program. 
 #### 4.3 Typescript
 
 ```js
-<<<<<<< HEAD
 console.log("Hello World");
-=======
-console.log("Hello World")
->>>>>>> Pertemuan-1
 ```
 
 Untuk menampilkan "Hello WOrld", TypeScript sama seperti Javascript.
@@ -792,7 +527,6 @@ func main() {
 
 Golang memerlukan deklarasi package dan main function untuk menjalankan program.
 
-<<<<<<< HEAD
 ```go
 // Error
 package main
@@ -805,8 +539,6 @@ func main() {
 
 Hati hati saat menulis kode di Golang, huruf depan diawali dengan huruf kapital untuk fungsi yang bersifat Public, dan huruf kecil yang bersifat Private.
 
-=======
->>>>>>> Pertemuan-1
 #### 4.6 Kotlin
 
 ```kt
@@ -835,7 +567,6 @@ fn main() {
 }
 ```
 
-<<<<<<< HEAD
 Untuk sekedar menampilkan "Hello World", Rust memang terlihat mudah. Namun, untuk kasus lainnya Rust terkesan kompleks. <br>
 
 ```rs
@@ -3268,9 +2999,19 @@ https://docs.flutter.dev/ui/widgets <br>
 https://waha.devlike.pro/ <br>
 https://github.com/khannedy/golang-clean-architecture <br>
 https://gorm.io/ <br>
-=======
-Untuk sekedar menampilkan "Hello World", Rust memang terlihat mudah. Namun, untuk kasus lainnya Rust terkesan kompleks.
->>>>>>> Pertemuan-1
-=======
-_5220411040 - Agil Ghani Istikmal_
->>>>>>> origin/Pertemuan-2
+
+# Referensi Keseluruhan
+
+https://api.flutter.dev/flutter/widgets/widgets-library.html <br>
+https://api.flutter.dev/flutter/widgets/widgets-library.html <br>
+https://medium.com/@marketing_96275/how-to-create-and-design-buttons-in-flutter-81e87f709348 <br>
+https://api.flutter.dev/flutter/widgets/widgets-library.html <br>
+https://stackoverflow.com/questions/51513429/how-to-do-rounded-corners-image-in-flutter <br>
+https://stackoverflow.com/questions/50287995/passing-data-to-statefulwidget-and-accessing-it-in-its-state-in-flutter
+<br>
+https://developers.xendit.co/api-reference/ <br>
+https://github.com/xendit/xendit-go <br>
+https://docs.flutter.dev/ui/widgets <br>
+https://waha.devlike.pro/ <br>
+https://github.com/khannedy/golang-clean-architecture <br>
+https://gorm.io/ <br>
