@@ -1,8 +1,8 @@
 <div>
-  <h2 align="center">
+  <h3 align="center">
   Laporan Hasil Belajar <br>
   Mobile & Web Service
-  </h2>
+  </h3>
 
   <br>
   <br>
