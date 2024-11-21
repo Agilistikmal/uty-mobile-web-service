@@ -1,3 +1,38 @@
+<div>
+  <h1 align="center">
+  Laporan Hasil Belajar <br>
+  Mobile & Web Service
+  </h1>
+
+  <br>
+  <br>
+  <br>
+
+  <p align="center">
+    <img src="./assets/logo_uty.png" width="200" />
+  </p>
+
+   <br>
+  <br>
+  <br>
+
+  <p align="center">
+    Disusun oleh: <br>
+    Agil Ghani Istikmal
+  </p>
+
+   <br>
+  <br>
+  <br>
+
+  <h3 align="center">
+  Program Studi Informatika <br>
+  Fakultas Sains Dan Teknologi <br>
+  Universitas Teknologi Yogyakarta <br>
+  2024
+  </h3>
+</div>
+
 # Data Diri
 
 | Nama                | NPM        |
@@ -142,6 +177,7 @@
     - [WebView Xendit/Payment](#webview-xenditpayment)
     - [Confirm/Refresh Payment Status](#confirmrefresh-payment-status)
   - [Referensi](#referensi-3)
+- [Referensi Keseluruhan](#referensi-keseluruhan)
 
 
 # Pertemuan 1 
@@ -2957,6 +2993,22 @@ Future<void> check() async {
 
 ## Referensi
 
+https://developers.xendit.co/api-reference/ <br>
+https://github.com/xendit/xendit-go <br>
+https://docs.flutter.dev/ui/widgets <br>
+https://waha.devlike.pro/ <br>
+https://github.com/khannedy/golang-clean-architecture <br>
+https://gorm.io/ <br>
+
+# Referensi Keseluruhan
+
+https://api.flutter.dev/flutter/widgets/widgets-library.html <br>
+https://api.flutter.dev/flutter/widgets/widgets-library.html <br>
+https://medium.com/@marketing_96275/how-to-create-and-design-buttons-in-flutter-81e87f709348 <br>
+https://api.flutter.dev/flutter/widgets/widgets-library.html <br>
+https://stackoverflow.com/questions/51513429/how-to-do-rounded-corners-image-in-flutter <br>
+https://stackoverflow.com/questions/50287995/passing-data-to-statefulwidget-and-accessing-it-in-its-state-in-flutter
+<br>
 https://developers.xendit.co/api-reference/ <br>
 https://github.com/xendit/xendit-go <br>
 https://docs.flutter.dev/ui/widgets <br>
